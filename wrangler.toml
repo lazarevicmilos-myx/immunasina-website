@@ -1,4 +1,4 @@
-name = "immunasina-rtanj"
+name = "immunasina"
 main = "dist/index.js"
 compatibility_date = "2026-06-28"
 
@@ -6,3 +6,5 @@ compatibility_date = "2026-06-28"
 [assets]
 directory = "./dist/public"
 binding = "ASSETS"
+
+compatibility_flags = ["nodejs_compat"]
