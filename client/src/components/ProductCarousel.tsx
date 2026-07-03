@@ -89,7 +89,7 @@ export default function ProductCarousel() {
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   // Create a dictionary map of your CDN assets
-  const bannerImages: Record<ProjectStatus, string> = {
+  const bannerImages: Record<string, string> = {
     latte: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Wild%20Latte%20cup.webp",
     boba: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Boba%20Tea%20promo%20banner-1.webp",
     protein: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Bio-Active%20protein%20shake%20promo%20banner.webp",
