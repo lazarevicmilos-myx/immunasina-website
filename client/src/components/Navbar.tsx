@@ -44,9 +44,9 @@ export default function Navbar() {
         boxShadow: scrolled ? "0 2px 20px oklch(0.22 0.04 55 / 0.06)" : "none",
       }}
     >
-      <div className="container flex items-center justify-between py-1 md:py-2">
+      <div className="container flex items-center justify-between py-3 md:py-4">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-0 no-underline" style={{ maxWidth: "160px" }}>
+        <a href="#" className="flex items-center gap-0 no-underline" style={{ maxWidth: "140px" }}>
           <img
             src={LOGO_URL}
             alt="Immunasina — Pure Functional Nutrition"
