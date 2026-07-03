@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1782130854651,
+      "tag": "0000_rich_polaris",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1782131175740,
+      "tag": "0001_exotic_sharon_carter",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1782135810009,
+      "tag": "0002_nostalgic_sentry",
+      "breakpoints": true
+    }
+  ]
+}
