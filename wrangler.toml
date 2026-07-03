@@ -1,12 +1,6 @@
 name = "immunasina"
 #main = "dist/index.js"
-main = "./worker-site/index.js"
-
-[site]
-# The directory where your compiled assets are located
-# This should point to your frontend build output directory
-# For Vite, this is typically 'dist'
-bucket = "./dist"
+main = "worker-site/index.js"
 
 compatibility_date = "2026-07-03"
 compatibility_flags = ["nodejs_compat"]
