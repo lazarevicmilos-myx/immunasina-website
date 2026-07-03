@@ -1,10 +1,9 @@
 name = "immunasina"
 main = "dist/index.js"
-compatibility_date = "2026-06-28"
+compatibility_date = "2026-07-03"
+compatibility_flags = ["nodejs_compat"]
 
 # Tells Wrangler where your built frontend React HTML/CSS/JS files are located:
 [assets]
 directory = "./dist/public"
 binding = "ASSETS"
-
-compatibility_flags = ["nodejs_compat"]
