@@ -142,7 +142,7 @@ export default function OrderSection() {
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Product image on left */}
-          <div className="reveal relative flex-shrink-0" style={{ width: "420px", height: "460px" }}>
+          <div className="reveal flex-1 flex items-center justify-center" style={{ aspectRatio: "1/1", minWidth: "280px", maxWidth: "420px" }}>
             <img
               src={PACKAGE_IMAGES[selected]}
               alt="Immunasina product packaging"

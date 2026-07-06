@@ -158,23 +158,24 @@ export default function ProductCarousel() {
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Carousel */}
-          <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg" onMouseEnter={() => setIsAutoPlay(false)} onMouseLeave={() => setIsAutoPlay(true)}>
+            <div className="relative min-h-[500px] md:h-[500px] overflow-hidden rounded-lg" onMouseEnter={() => setIsAutoPlay(false)} onMouseLeave={() => setIsAutoPlay(true)}>
             {products.map((product, index) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: index === currentIndex ? 1 : 0 }}
                 transition={{ duration: 0.6 }}
-                className="absolute inset-0"
+                className="absolute inset-0 flex flex-col md:flex-row items-center justify-center p-4"
               >
-
-                <div className="h-full flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-lg" style={{ backgroundColor: product.id === 'latte' ? "oklch(63.503% 0.09391 116.62 / 0.812)" :
+                <div className="h-full w-full flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-lg" style={{
+                  backgroundColor: product.id === 'latte' ? "oklch(63.503% 0.09391 116.62 / 0.812)" :
                   product.id === 'boba' ? "oklch(78.144% 0.12155 80.533)" :
                   product.id === 'coffee' ? "oklch(40.975% 0.06601 80.077)" :
                   product.id === 'shake' ? "oklch(67.517% 0.08469 70.968 / 0.812)" :
-                  "oklch(0.95 0.01 80)" }}>
+                  "oklch(0.95 0.01 80)"
+                }}>
                   {/* Content */}
-                  <div className="flex-1 md:pr-8">
+                  <div className="flex-1 md:pr-8 text-center md:text-left mb-8 md:mb-0">
                     {product.isHero && (
                       <span className="inline-block px-3 py-1 text-xs tracking-widest uppercase rounded-full mb-4" style={{ backgroundColor: "oklch(0.65 0.08 80)", color: "oklch(0.25 0.04 55)" }}>
                         {t("PRODUCTS.PRODUCT_1_BADGE")}
@@ -239,7 +240,7 @@ export default function ProductCarousel() {
                   </div>
 
                   {/* Visual Indicator */}
-                  <div className="hidden md:flex flex-col items-center justify-center w-96 h-96 rounded-full" style={{ backgroundColor: product.id === 'latte' ? "oklch(0.35 0.04 55)" : "oklch(0.92 0.01 80)" }}>
+                  <div className="flex flex-col items-center justify-center w-full md:w-96 h-auto md:h-96 rounded-full mt-8 md:mt-0" style={{ backgroundColor: product.id === 'latte' ? "oklch(0.35 0.04 55)" : "oklch(0.92 0.01 80)" }}>
                     <div className="text-5xl">
                       <img
                         src={bannerImages[product.id]}
