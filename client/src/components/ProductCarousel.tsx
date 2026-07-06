@@ -88,7 +88,6 @@ export default function ProductCarousel() {
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Create a dictionary map of your CDN assets
   const bannerImages: Record<string, string> = {
     latte: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Wild%20Latte%20cup.webp",
     boba: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Boba%20Tea%20promo%20banner-1.webp",
@@ -112,8 +111,6 @@ export default function ProductCarousel() {
     setIsAutoPlay(false);
   };
 
-  const currentProduct = products[currentIndex];
-
   useEffect(() => {
     if (!isAutoPlay) return;
 
@@ -125,24 +122,22 @@ export default function ProductCarousel() {
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
-  }, [isAutoPlay]);
-
-
+  }, [isAutoPlay, products.length]);
 
   return (
     <section
       id="products"
-      className="relative py-20 px-4 md:px-8"
+      className="relative py-16 md:py-20 px-4 md:px-8"
       style={{ backgroundColor: "oklch(0.97 0.015 80)" }}
       aria-label="Product carousel showcasing all Immunasina products"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <p className="text-sm tracking-widest uppercase mb-4" style={{ color: "oklch(0.65 0.08 80)" }}>
             {t("PRODUCTS.SECTION_TITLE")}
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif mb-4" style={{ color: "oklch(0.22 0.04 55)" }}>
+          <h2 className="text-3xl md:text-5xl font-serif mb-4" style={{ color: "oklch(0.22 0.04 55)" }}>
             {t("PRODUCTS.HEADING")} <span style={{ color: "oklch(0.65 0.08 80)" }}>{t("PRODUCTS.HEADING_SPAN")}</span>
           </h2>
           <div className="flex justify-center gap-2 mb-6">
@@ -150,59 +145,68 @@ export default function ProductCarousel() {
             <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "oklch(0.65 0.08 80)" }}></div>
             <div className="w-12 h-1" style={{ backgroundColor: "oklch(0.65 0.08 80)" }}></div>
           </div>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "oklch(0.35 0.04 55)" }}>
+          <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: "oklch(0.35 0.04 55)" }}>
             {t("PRODUCTS.DESCRIPTION")}
           </p>
         </div>
 
         {/* Carousel Container */}
         <div className="relative">
-          {/* Main Carousel */}
-            <div className="relative min-h-[500px] md:h-[500px] overflow-hidden rounded-lg" onMouseEnter={() => setIsAutoPlay(false)} onMouseLeave={() => setIsAutoPlay(true)}>
+          {/* Optimized Heights to dynamically hug the newly upscaled images */}
+          <div 
+            className="relative min-h-[700px] sm:min-h-[720px] md:min-h-[0px] md:h-[540px] overflow-hidden rounded-lg" 
+            onMouseEnter={() => setIsAutoPlay(false)} 
+            onMouseLeave={() => setIsAutoPlay(true)}
+          >
             {products.map((product, index) => (
               <motion.div
                 key={product.id}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: index === currentIndex ? 1 : 0 }}
                 transition={{ duration: 0.6 }}
-                className="absolute inset-0 flex flex-col md:flex-row items-center justify-center p-4"
+                className="absolute inset-0 flex flex-col md:flex-row items-center justify-center p-2 md:p-4"
+                style={{ pointerEvents: index === currentIndex ? "auto" : "none" }}
               >
-                <div className="h-full w-full flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-lg" style={{
-                  backgroundColor: product.id === 'latte' ? "oklch(63.503% 0.09391 116.62 / 0.812)" :
-                  product.id === 'boba' ? "oklch(78.144% 0.12155 80.533)" :
-                  product.id === 'coffee' ? "oklch(40.975% 0.06601 80.077)" :
-                  product.id === 'shake' ? "oklch(67.517% 0.08469 70.968 / 0.812)" :
-                  "oklch(0.95 0.01 80)"
-                }}>
-                  {/* Content */}
-                  <div className="flex-1 md:pr-8 text-center md:text-left mb-8 md:mb-0">
+                <div 
+                  className="h-full w-full flex flex-col md:flex-row items-center justify-between p-6 md:p-12 rounded-lg gap-4 md:gap-0" 
+                  style={{
+                    backgroundColor: product.id === 'latte' ? "oklch(63.503% 0.09391 116.62 / 0.812)" :
+                    product.id === 'boba' ? "oklch(78.144% 0.12155 80.533)" :
+                    product.id === 'coffee' ? "oklch(40.975% 0.06601 80.077)" :
+                    product.id === 'shake' ? "oklch(67.517% 0.08469 70.968 / 0.812)" :
+                    "oklch(0.95 0.01 80)"
+                  }}
+                >
+                  {/* Content Area */}
+                  <div className="flex-1 md:pr-8 text-center md:text-left flex flex-col justify-center">
                     {product.isHero && (
-                      <span className="inline-block px-3 py-1 text-xs tracking-widest uppercase rounded-full mb-4" style={{ backgroundColor: "oklch(0.65 0.08 80)", color: "oklch(0.25 0.04 55)" }}>
+                      <span className="inline-block self-center md:self-start px-3 py-1 text-xs tracking-widest uppercase rounded-full mb-3" style={{ backgroundColor: "oklch(0.65 0.08 80)", color: "oklch(0.25 0.04 55)" }}>
                         {t("PRODUCTS.PRODUCT_1_BADGE")}
                       </span>
                     )}
-                    <h3 className="text-3xl md:text-4xl font-serif mb-2" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" : "oklch(0.22 0.04 55)" }}>
+                    <h3 className="text-2xl md:text-4xl font-serif mb-2" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" : "oklch(0.22 0.04 55)" }}>
                       {product.name}
                     </h3>
-                    <p className="text-sm tracking-widest uppercase mb-4" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
+                    <p className="text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
                     product.id === 'boba' ? "oklch(0.95 0.01 80)" :
                     product.id === 'shake' ? "oklch(0.95 0.01 80)" : "oklch(0.65 0.08 80)" }}>
                       {product.tagline}
                     </p>
-                    <p className="mb-4 leading-relaxed" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" :
+                    <p className="text-sm md:text-base mb-4 leading-relaxed" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" :
                       product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.35 0.04 55)" }}>
                       {product.description}
                     </p>
-                    <div className="space-y-2 text-sm mb-6" style={{ color: product.id === 'coffee' ? "oklch(0.95 0.01 80)" : "oklch(0.45 0.04 55)" }}>
+                    
+                    <div className="space-y-1.5 text-xs md:text-sm mb-5 md:mb-6" style={{ color: product.id === 'coffee' ? "oklch(0.95 0.01 80)" : "oklch(0.45 0.04 55)" }}>
                       <p><strong>{t("PRODUCTS.STANDOUT_LABEL")}:</strong> {product.standout}</p>
                       <p><strong>{t("PRODUCTS.TEXTURE_LABEL")}:</strong> {product.texture}</p>
                       <p><strong>{t("PRODUCTS.BEST_FOR_LABEL")}:</strong> {product.bestFor}</p>
                     </div>
 
                     {/* Product Specs */}
-                    <div className="flex gap-6 text-sm">
+                    <div className="flex justify-center md:justify-start gap-6 text-xs md:text-sm">
                       <div>
-                        <p className="text-xs tracking-widest uppercase opacity-75" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
+                        <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
                         product.id === 'boba' ? "oklch(0.95 0.01 80)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
@@ -213,7 +217,7 @@ export default function ProductCarousel() {
                         </p>
                       </div>
                       <div>
-                        <p className="text-xs tracking-widest uppercase opacity-75" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
+                        <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
                         product.id === 'boba' ? "oklch(0.95 0.01 80)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
@@ -224,7 +228,7 @@ export default function ProductCarousel() {
                         </p>
                       </div>
                       <div>
-                        <p className="text-xs tracking-widest uppercase opacity-75" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
+                        <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
                         product.id === 'boba' ? "oklch(0.95 0.01 80)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
@@ -239,15 +243,16 @@ export default function ProductCarousel() {
                     </div>
                   </div>
 
-                  {/* Visual Indicator */}
-                  <div className="flex flex-col items-center justify-center w-full md:w-96 h-auto md:h-96 rounded-full mt-8 md:mt-0" style={{ backgroundColor: product.id === 'latte' ? "oklch(0.35 0.04 55)" : "oklch(0.92 0.01 80)" }}>
-                    <div className="text-5xl">
-                      <img
-                        src={bannerImages[product.id]}
-                        alt={`Immunasina — ${product.name}`}
-                        style={{ width: "256px", height: "256px", opacity: 1, transition: "opacity 0.3s", borderRadius: "12px" }}
-                      />
-                    </div>
+                  {/* Visual Indicator - Maximized Mobile Aspect Ratios to Populate Void */}
+                  <div 
+                    className="flex items-center justify-center w-72 h-72 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shrink-0 mt-2 md:mt-0 overflow-hidden" 
+                    style={{ backgroundColor: product.id === 'latte' ? "oklch(0.35 0.04 55)" : "oklch(0.92 0.01 80)" }}
+                  >
+                    <img
+                      src={bannerImages[product.id]}
+                      alt={`Immunasina — ${product.name}`}
+                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain transition-opacity duration-300"
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -257,20 +262,20 @@ export default function ProductCarousel() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-16 p-2 rounded-full hover:bg-opacity-80 transition-all"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-16 p-2 rounded-full hover:bg-opacity-80 transition-all z-10"
             style={{ backgroundColor: "oklch(0.65 0.08 80)" }}
             aria-label={t("PRODUCTS.PREVIOUS_PRODUCT")}
           >
-            <ChevronLeft className="w-6 h-6" style={{ color: "oklch(0.95 0.01 80)" }} />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" style={{ color: "oklch(0.95 0.01 80)" }} />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 md:translate-x-16 p-2 rounded-full hover:bg-opacity-80 transition-all"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-16 p-2 rounded-full hover:bg-opacity-80 transition-all z-10"
             style={{ backgroundColor: "oklch(0.65 0.08 80)" }}
             aria-label={t("PRODUCTS.NEXT_PRODUCT")}
           >
-            <ChevronRight className="w-6 h-6" style={{ color: "oklch(0.95 0.01 80)" }} />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" style={{ color: "oklch(0.95 0.01 80)" }} />
           </button>
         </div>
 
