@@ -79,6 +79,9 @@ function vitePluginManusDebugCollector(): Plugin {
     name: "manus-debug-collector",
 
     transformIndexHtml(html) {
+      // This regex finds any instance of 'crossorigin' or 'crossorigin=""' and removes it
+      html = html.replace(/\s?crossorigin(=["']["'])?/g, '');
+      
       if (process.env.NODE_ENV === "production") {
         return html;
       }
