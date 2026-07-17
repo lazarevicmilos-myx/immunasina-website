@@ -1,7 +1,6 @@
 import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler';
 
-const assetManifest = JSON.parse(import.meta.env.ASSET_MANIFEST || 
-  JSON.stringify(globalThis.__CF_ASSET_MANIFEST || {}));
+const assetManifest = JSON.stringify(globalThis.__CF_ASSET_MANIFEST || {});
 
 addEventListener('fetch', event => {
   event.respondWith(handleEvent(event));
