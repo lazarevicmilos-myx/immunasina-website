@@ -23,7 +23,12 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (switchable) {
-      const stored = localStorage.getItem("theme");
+      let stored = null;
+      try {
+        stored = localStorage.getItem("theme");
+      } catch (error) {
+        console.error("Failed to access localStorage", error);
+      }
       return (stored as Theme) || defaultTheme;
     }
     return defaultTheme;
@@ -38,7 +43,11 @@ export function ThemeProvider({
     }
 
     if (switchable) {
-      localStorage.setItem("theme", theme);
+      try {
+        localStorage.setItem("theme", theme);
+      } catch (error) {
+        console.error("Failed to access localStorage", error);
+      }
     }
   }, [theme, switchable]);
 

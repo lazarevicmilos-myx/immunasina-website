@@ -23,7 +23,11 @@ export default function Navbar() {
 
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
-    localStorage.setItem("preferredLanguage", lang);
+    try {
+      localStorage.setItem("preferredLanguage", lang);
+    } catch (error) {
+      console.error("Failed to access localStorage", error);
+    }
   };
 
   const navLinks = [

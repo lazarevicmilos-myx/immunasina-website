@@ -43,13 +43,22 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const [sidebarWidth, setSidebarWidth] = useState(() => {
-    const saved = localStorage.getItem(SIDEBAR_WIDTH_KEY);
+    let saved = null;
+    try {
+      saved = localStorage.getItem(SIDEBAR_WIDTH_KEY);
+    } catch (error) {
+      console.error("Failed to access localStorage", error);
+    }
     return saved ? parseInt(saved, 10) : DEFAULT_WIDTH;
   });
   const { loading, user } = useAuth();
 
   useEffect(() => {
-    localStorage.setItem(SIDEBAR_WIDTH_KEY, sidebarWidth.toString());
+    try {
+      localStorage.setItem(SIDEBAR_WIDTH_KEY, sidebarWidth.toString());
+    } catch (error) {
+      console.error("Failed to access localStorage", error);
+    }
   }, [sidebarWidth]);
 
   if (loading) {

@@ -167,6 +167,12 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    // This tells esbuild to compile syntax down to ES2015/ES6
+    // which guarantees compatibility with older iPhones.
+    target: ['es2015', 'ios12'],
+    // Optional: If the above doesn't work, ensure you aren't minifying 
+    // into problematic modern syntax
+    minify: 'terser',
   },
   server: {
     host: true,
