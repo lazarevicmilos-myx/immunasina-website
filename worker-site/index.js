@@ -1,5 +1,8 @@
 import { getAssetFromKV, mapRequestToAsset } from '@cloudflare/kv-asset-handler';
 
+const assetManifest = JSON.parse(import.meta.env.ASSET_MANIFEST || 
+  JSON.stringify(globalThis.__CF_ASSET_MANIFEST || {}));
+
 addEventListener('fetch', event => {
   event.respondWith(handleEvent(event));
 });
@@ -9,12 +12,56 @@ async function handleEvent(event) {
     return await getAssetFromKV(event, {
       mapRequestToAsset: request => {
         const url = new URL(request.url);
+        let mappedRequest = request;
+
         // If the request is for the root, serve index.html
         if (url.pathname === '/') {
-          return new Request(`${url.origin}/index.html`, request);
+          mappedRequest = new Request(`${url.origin}/index.html`, request);
+        } else {
+          // Otherwise, serve the requested asset
+          mappedRequest = mapRequestToAsset(request);
         }
-        // Otherwise, serve the requested asset
-        return mapRequestToAsset(request);
+
+        // Determine content type based on file extension
+        const extension = mappedRequest.url.split(".").pop();
+        let contentType = "application/octet-stream"; // Default
+
+        switch (extension) {
+          case "js":
+            contentType = "application/javascript";
+            break;
+          case "css":
+            contentType = "text/css";
+            break;
+          case "html":
+            contentType = "text/html";
+            break;
+          case "json":
+            contentType = "application/json";
+            break;
+          case "png":
+            contentType = "image/png";
+            break;
+          case "jpg":
+          case "jpeg":
+            contentType = "image/jpeg";
+            break;
+          case "gif":
+            contentType = "image/gif";
+            break;
+          case "svg":
+            contentType = "image/svg+xml";
+            break;
+          case "ico":
+            contentType = "image/x-icon";
+            break;
+          // Add more cases as needed for other asset types
+        }
+
+        const headers = new Headers(mappedRequest.headers);
+        headers.set("Content-Type", contentType);
+
+        return new Request(mappedRequest.url, { ...mappedRequest, headers });
       },
     });
   } catch (e) {
