@@ -18,8 +18,8 @@ i18n
       sr: { translation: srTranslations },
     },
     detection: {
-      order: ['navigator'],
-      caches: [], // Disable localStorage caching temporarily
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
     },
   });
 
