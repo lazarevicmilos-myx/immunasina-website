@@ -17,6 +17,7 @@ i18n
       en: { translation: enTranslations },
       sr: { translation: srTranslations },
     },
+    lng: 'sr',
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
