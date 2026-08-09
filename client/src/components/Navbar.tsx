@@ -31,10 +31,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: t("NAV.LEGEND"), href: "#legend" },
-    { label: t("NAV.INGREDIENTS"), href: "#ingredients" },
+    { label: t("NAV.RITUALS"), href: "#rituals" },
+    { label: t("NAV.WHY_IT_WORKS"), href: "#why-it-works" },
     { label: t("NAV.BLEND"), href: "#formulation" },
-    { label: t("NAV.RITUAL"), href: "#how-to-prepare" },
     { label: t("NAV.COLLECTION"), href: "#products" },
   ];
 

@@ -53,11 +53,12 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               {[
-                { label: t("FOOTER.NAVIGATE_1"), href: "#legend" },
-                { label: t("FOOTER.NAVIGATE_2"), href: "#ingredients" },
+                { label: t("FOOTER.NAVIGATE_1"), href: "#rituals" },
+                { label: t("FOOTER.NAVIGATE_2"), href: "#why-it-works" },
                 { label: t("FOOTER.NAVIGATE_3"), href: "#formulation" },
-                { label: t("FOOTER.NAVIGATE_4"), href: "#how-to-prepare" },
-                { label: t("FOOTER.NAVIGATE_5"), href: "#products" },
+                { label: t("FOOTER.NAVIGATE_4"), href: "#products" },
+                { label: t("FOOTER.NAVIGATE_5"), href: "#" },
+                { label: t("FOOTER.NAVIGATE_6"), href: "#" },
               ].map((link) => (
                 <a
                   key={link.href}

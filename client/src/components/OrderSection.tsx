@@ -36,14 +36,14 @@ export default function OrderSection() {
       price: t("ORDER.PRODUCT_1_PRICE"),
       priceNote: t("ORDER.PRODUCT_1_PRICE_NOTE"),
     },
-    {
-      id: "boba",
-      name: t("ORDER.PRODUCT_2_NAME"),
-      size: t("ORDER.PRODUCT_2_SIZE"),
-      servings: t("ORDER.PRODUCT_2_SERVINGS"),
-      price: t("ORDER.PRODUCT_2_PRICE"),
-      priceNote: t("ORDER.PRODUCT_2_PRICE_NOTE"),
-    },
+    // {
+    //   id: "boba",
+    //   name: t("ORDER.PRODUCT_2_NAME"),
+    //   size: t("ORDER.PRODUCT_2_SIZE"),
+    //   servings: t("ORDER.PRODUCT_2_SERVINGS"),
+    //   price: t("ORDER.PRODUCT_2_PRICE"),
+    //   priceNote: t("ORDER.PRODUCT_2_PRICE_NOTE"),
+    // },
     {
       id: "protein",
       name: t("ORDER.PRODUCT_3_NAME"),
@@ -60,14 +60,14 @@ export default function OrderSection() {
       price: t("ORDER.PRODUCT_4_PRICE"),
       priceNote: t("ORDER.PRODUCT_4_PRICE_NOTE"),
     },
-    {
-      id: "coffee",
-      name: t("ORDER.PRODUCT_5_NAME"),
-      size: t("ORDER.PRODUCT_5_SIZE"),
-      servings: t("ORDER.PRODUCT_5_SERVINGS"),
-      price: t("ORDER.PRODUCT_5_PRICE"),
-      priceNote: t("ORDER.PRODUCT_5_PRICE_NOTE"),
-    },
+    // {
+    //   id: "coffee",
+    //   name: t("ORDER.PRODUCT_5_NAME"),
+    //   size: t("ORDER.PRODUCT_5_SIZE"),
+    //   servings: t("ORDER.PRODUCT_5_SERVINGS"),
+    //   price: t("ORDER.PRODUCT_5_PRICE"),
+    //   priceNote: t("ORDER.PRODUCT_5_PRICE_NOTE"),
+    // },
   ];
 
   const submitOrderMutation = trpc.orders.submitInquiry.useMutation();
@@ -78,7 +78,8 @@ export default function OrderSection() {
 
     try {
       await submitOrderMutation.mutateAsync({
-        productId: selected as "latte" | "boba" | "protein" | "shake" | "coffee",
+        // productId: selected as "latte" | "boba" | "protein" | "shake" | "coffee",
+        productId: selected as "latte" | "protein" | "shake",
         fullName: formData.name,
         email: formData.email,
         country: formData.country,

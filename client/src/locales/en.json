@@ -3,23 +3,131 @@
     "LEGEND": "THE LEGEND",
     "INGREDIENTS": "INGREDIENTS",
     "BLEND": "THE BLEND",
-    "RITUAL": "THE RITUAL",
+    "RITUALS": "THE RITUALS",
     "COLLECTION": "OUR COLLECTION",
-    "ORDER": "ORDER NOW"
+    "ORDER": "ORDER NOW",
+    "WHY_IT_WORKS": "WHY IT WORKS"
   },
   "HERO": {
     "TAGLINE": "CRAFTED FROM LYOPHILIZED DONKEY MILK",
-    "BRAND": "IMMUNASINA",
-    "TITLE": "Rtanj Milk Tea",
-    "SUBTITLE": "Mystical Vitality Brew — Backed by Science",
+    "H1_BRAND": "IMMUNASINA",
+    "H1_TAGLINE": "PURE FUNCTIONAL NUTRITION",
+    "TITLE_PART1": "Three moments.",
+    "TITLE_PART2": "Three functional answers to what your body needs.",
+    "SUBTITLE": "What does your body need right now?",
     "BENEFIT_1": "IMMUNITY SUPPORT",
     "BENEFIT_2": "DIGESTIVE COMFORT",
     "BENEFIT_3": "NATURAL VITALITY",
     "BENEFIT_4": "PREMIUM EXPERIENCE",
     "CTA_BEGIN": "BEGIN YOUR RITUAL",
-    "CTA_DISCOVER": "DISCOVER MULTI-SENSORY EXPERIENCE",
+    "CTA_DISCOVER": "DISCOVER RTANJ WILD LATTE",
     "CTA_WHY_IT_WORKS": "FIND OUT WHY IT WORKS",
     "SCROLL": "SCROLL"
+  },
+  "RITUALS": {
+    "MORNING": {
+      "TITLE1": "THE MORNING",
+      "TITLE2": "FOCUS RITUAL",
+      "TIME": "8:30 AM",
+      "SUBTITLE": "A better beginning.",
+      "H1_BRAND": "RTANJ WILD LATTE",
+      "H1_TAGLINE": "CLEAN ENERGY & MINDFUL FOCUS",
+      "DESCRIPTION1": "For the mornings when you want nourishment, not just another coffee.",
+      "DESCRIPTION2": "A warm or iced, comforting herbal latte that sharpens your focus while soothing your gut. Engineered to deliver a steady, calm state of alert performance — without caffeine jitters, acidity, or heart palpitations.",
+      "BUTTON": "EXPLORE YOUR MORNING FOCUS"
+    },
+    "AFTERNOON": {
+      "TITLE1": "THE AFTERNOON",
+      "TITLE2": "POWER & RECOVERY MOMENT",
+      "TIME": "2:00 PM",
+      "SUBTITLE": "When your body asks for more.",
+      "H1_BRAND": "BIO-ACTIVE PROTEIN SHAKE",
+      "H1_TAGLINE": "BIO-AVAILABLE POWER & INSTANT CELLULAR RECOVERY",
+      "DESCRIPTION1": "The mid-day wall hits. You need real, clean nourishment—not heavy, artificial shakes.",
+      "DESCRIPTION2": "A light, highly bio-available protein shake designed for maximum absorption. It refuels your body, rebuilds lean tissue, and combats mid-day fatigue without the bloating, heaviness, or artificial aftertaste of traditional protein powders.",
+      "BUTTON": "REFUEL YOUR BODY"
+    },
+    "EVENING": {
+      "TITLE1": "RICH, GUT-FRIENDLY",
+      "TITLE2": "EVENING NUTRITION",
+      "TIME": "7:30 PM",
+      "SUBTITLE": "End the day gently.",
+      "H1_BRAND": "GENTLE VITALITY BLEND",
+      "H1_TAGLINE": "GENTLE EVERYDAY IMMUNITY & DEEP RESTORATIVE WELLNESS",
+      "DESCRIPTION1": "You want to slow down, protect yours and your family's immunity, and give your body gentle, nourishing care before bed.",
+      "DESCRIPTION2": "A delicate, nutrient-dense blend formulated for general wellness across all ages. Naturally caffeine-free and soothing, it acts as a daily protective shield while promoting a calm, relaxed transition into sleep.",
+      "BUTTON": "NOURISH & UNWIND"
+    }
+  },
+  "SEO": {
+    "KEYWORDS_1": "functional nutrition drinks",
+    "KEYWORDS_2": "premium functional wellness",
+    "KEYWORDS_3": "donkey milk products",
+    "KEYWORDS_4": "caffeine-free morning focus",
+    "KEYWORDS_5": "herbal latte for energy",
+    "KEYWORDS_6": "post-workout bio-active protein",
+    "KEYWORDS_7": "immunity drink",
+    "KEYWORDS_8": "immunity support",
+    "KEYWORDS_9": "natural vitality",
+    "KEYWORDS_10": "Rtanj tea latte",
+    "KEYWORDS_11": "donkey milk protein shake",
+    "KEYWORDS_12": "digestive comfort wellness blend",
+    "KEYWORDS_13": "caffeine-free latte"
+  },
+  "NUTRITION": {
+    "TITLE": "Nutrition designed around real life.",
+    "SUBTITLE1": "Three formulations. Three moments. One philosophy: ",
+    "SUBTITLE2": "Pure functional nutrition crafted from lyophilized donkey milk.",
+    "MORNING": {
+      "TITLE": "Morning Focus",
+      "DESCRIPTION": "Calm energy. Clear mind."
+    },
+    "AFTERNOON": {
+      "TITLE": "Afternoon Recover",
+      "DESCRIPTION": "Refuel your body. Sustain your energy."
+    },
+    "EVENING": {
+      "TITLE": "Evening Unwind",
+      "DESCRIPTION": "Nourish & protect your immunity. Rest deeply."
+    }
+  },
+  "WHY_IT_WORKS": {
+    "PAGE_TITLE": "WHY IT WORKS",
+    "METHOD_TITLE": "The Immunasina Method",
+    "METHOD_SUBTITLE": "Four pillars of functional excellence",
+    "STEP_1": {
+      "TITLE": "NATURE",
+      "DESCRIPTION": "Extraordinary ingredients with authentic heritage."
+    },
+    "STEP_2": {
+      "TITLE": "SCIENCE",
+      "DESCRIPTION": "Modern processing and evidence-led formulation."
+    },
+    "STEP_3": {
+      "TITLE": "FUNCTION",
+      "DESCRIPTION": "Designed around everyday wellness needs."
+    },
+    "STEP_4": {
+      "TITLE": "EXPERIENCE",
+      "DESCRIPTION": "Taste, texture and ritual people actually enjoy."
+    },
+    "RTANJ_SECTION_TITLE": "RTANJ WILD LATTE",
+    "RTANJ_SUBTITLE": "Mystical vitality brew",
+    "RTANJ_INTRO": "A premium herbal latte inspired by the legendary Rtanj Mountain.",
+    "RTANJ_DESCRIPTION": "A carefully formulat blend of Rtanj tea, lyophilized donkey milk, oat and natural honey — created as a modern daily wellness ritual.",
+    "RTANJ_BUTTON": "DISCOVER RTANJ WILD LATTE",
+    "DONKEY_MILK_TITLE": "WHY DONKEY MILK?",
+    "DONKEY_MILK_SUBTITLE": "Nature's Rarest Milk",
+    "DONKEY_MILK_INTRO": "Used since ancient Egypt and Mediterranean traditions, donkey milk is now rediscovered by modern science.",
+    "DONKEY_MILK_PRESERVATION": "Preserved through lyophilization (freeze-drying) to maintain its bioactive integrity.",
+    "DONKEY_MILK_BENEFIT_1_TITLE": "Rich in Lysozyme & Lactoferrin",
+    "DONKEY_MILK_BENEFIT_1_DESC": "Supports the body's natural defense.",
+    "DONKEY_MILK_BENEFIT_2_TITLE": "High digestibility",
+    "DONKEY_MILK_BENEFIT_2_DESC": "Gentle on the digestive system.",
+    "DONKEY_MILK_BENEFIT_3_TITLE": "Protein profile close to human milk",
+    "DONKEY_MILK_BENEFIT_3_DESC": "Naturally balanced and easily absorbed.",
+    "DONKEY_MILK_BENEFIT_4_TITLE": "Naturally gentle & nutrient-dense",
+    "DONKEY_MILK_BENEFIT_4_DESC": "Rich in essential vitamins and minerals."
   },
   "LEGEND": {
     "SECTION_TITLE": "SERBIA\"S SACRED MOUNTAIN",
@@ -234,7 +342,7 @@
     "SECTION_TITLE": "OUR COLLECTION",
     "HEADING": "The Immunasina ",
     "HEADING_SPAN": "Product Line",
-    "DESCRIPTION": "Five distinct formulations, one shared commitment to pure functional nutrition crafted from lyophilized donkey milk.",
+    "DESCRIPTION": "Tree distinct formulations, one shared commitment to pure functional nutrition crafted from lyophilized donkey milk.",
     "PRODUCT_1_BADGE": "FLAGSHIP PRODUCT",
     "PRODUCT_1_NAME": "Rtanj Wild Latte",
     "PRODUCT_1_TAGLINE": "MYSTICAL VITALITY BREW",
@@ -345,16 +453,17 @@
   "FOOTER": {
     "TAGLINE": "Tradition inspires us. Science guides us. Wellness is our purpose.",
     "NAVIGATE_TITLE": "NAVIGATE",
-    "NAVIGATE_1": "The Legend",
-    "NAVIGATE_2": "Ingredients",
+    "NAVIGATE_1": "The Ritual",
+    "NAVIGATE_2": "Why It Works",
     "NAVIGATE_3": "The Blend",
-    "NAVIGATE_4": "The Ritual",
-    "NAVIGATE_5": "Our Collection",
+    "NAVIGATE_4": "Our Collection",
+    "NAVIGATE_5": "The Science Proof",
+    "NAVIGATE_6": "For Partners",
     "CONTACT_TITLE": "CONTACT",
     "CONTACT_DESC": "For orders and inquiries, use the order form above or reach us at:",
     "CONTACT_EMAIL": "donkeymilkproteinshake@gmail.com",
     "SHIPPING": "Shipping to Europe and beyond.",
     "COPYRIGHT": "© 2026 Immunasina · All rights reserved · Crafted from Lyophilized Donkey Milk.",
-    "LOCATION": "Serbia · Rtanj · Pure Functional Nutrition"
+    "LOCATION": "Serbia · Belgrade · Pure Functional Nutrition"
   }
 }

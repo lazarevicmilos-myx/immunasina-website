@@ -3,23 +3,131 @@
     "LEGEND": "LEGENDA",
     "INGREDIENTS": "SASTOJCI",
     "BLEND": "JEDINSTVENA MEŠAVINA",
-    "RITUAL": "RITUAL",
+    "RITUALS": "RITUALI",
     "COLLECTION": "NAŠA KOLEKCIJA",
-    "ORDER": "PORUČI ODMAH"
+    "ORDER": "PORUČI ODMAH",
+    "WHY_IT_WORKS": "ZAŠTO FUNKCIONIŠE"
   },
   "HERO": {
     "TAGLINE": "NAPRAVLJENO OD LIOFILIZOVANOG MAGAREĆEG MLEKA",
-    "BRAND": "IMMUNASINA",
-    "TITLE": "Rtanj Milk Tea",
-    "SUBTITLE": "Mistični napitak vitalnosti — Potvrđen naukom",
+    "H1_BRAND": "IMMUNASINA",
+    "H1_TAGLINE": "ČISTA FUNKCIONALNA ISHRANA",
+    "TITLE_PART1": "Tri trenutka.",
+    "TITLE_PART2": "Tri funkcionalna odgovora na potrebe vašeg tela.",
+    "SUBTITLE": "Šta je vašem telu potrebno upravo sada?",
     "BENEFIT_1": "PODRŠKA IMUNITETU",
     "BENEFIT_2": "KOMFOR ZA DIGESTIVNI SISTEM",
     "BENEFIT_3": "PRIRODNA VITALNOST",
     "BENEFIT_4": "PREMIUM ISKUSTVO",
     "CTA_BEGIN": "ZAPOČNITE SVOJ RITUAL",
-    "CTA_DISCOVER": "OTKRIJTE VIŠEČULNO ISKUSTVO",
+    "CTA_DISCOVER": "OTKRIJTE RTANJ WILD LATTE",
     "CTA_WHY_IT_WORKS": "SAZNAJ ZAŠTO FUNKCIONIŠE",
     "SCROLL": "SKROLUJTE"
+  },
+  "RITUALS": {
+    "MORNING": {
+      "TITLE1": "JUTARNJI",
+      "TITLE2": "RITUAL FOKUSA",
+      "TIME": "8:30",
+      "SUBTITLE": "Bolji početak.",
+      "H1_BRAND": "RTANJ WILD LATTE",
+      "H1_TAGLINE": "STABILNA ENERGIJA I JASAN FOKUS",
+      "DESCRIPTION1": "Za jutra kada želite hranljiv početak, a ne samo još jednu kafu.",
+      "DESCRIPTION2": "Topao ili leden, prijatan biljni latte koji izoštrava fokus i istovremeno prija vašem stomaku. Osmišljen da pruži stabilnu energiju i mirnu, budnu koncentraciju — bez nervoze, kiselosti i neprijatnog osećaja ubrzanog rada srca.",
+      "BUTTON": "ISTRAŽITE SVOJ JUTARNJI FOKUS"
+    },
+    "AFTERNOON": {
+      "TITLE1": "POPODNEVNI",
+      "TITLE2": "TRENUTAK SNAGE I OPORAVKA",
+      "TIME": "14:00",
+      "SUBTITLE": "Kada vašem telu treba više.",
+      "H1_BRAND": "BIO-ACTIVE PROTEIN SHAKE",
+      "H1_TAGLINE": "BRZO DOSTUPNA SNAGA I OPORAVAK ORGANIZMA",
+      "DESCRIPTION1": "Popodnevni pad energije dolazi. Potrebna vam je prava, čista ishrana — a ne teški, veštački šejkovi.",
+      "DESCRIPTION2": "Lagani proteinski šejk osmišljen za optimalnu apsorpciju i efikasno iskorišćavanje proteina. Podržava obnovu mišićnog tkiva i pomaže u smanjenju popodnevnog umora — bez nadutosti, osećaja težine i veštačkog ukusa tradicionalnih proteinskih praškova.",
+      "BUTTON": "OBNOVITE SVOJU SNAGU"
+    },
+    "EVENING": {
+      "TITLE1": "BOGATA I BLAGA VEČERNJA ISHRANA,",
+      "TITLE2": "PRIJATNA ZA PROBAVU",
+      "TIME": "19:30",
+      "SUBTITLE": "Završite dan nežno.",
+      "H1_BRAND": "GENTLE VITALITY BLEND",
+      "H1_TAGLINE": "NEŽNA SVAKODNEVNA PODRŠKA IMUNITETU I DUBOKO OBNAVLJAJUĆE BLAGOSTANJE",
+      "DESCRIPTION1": "Želite da usporite, pružite podršku imunitetu sebi i svojoj porodici i date telu nežnu, hranljivu negu pred spavanje.",
+      "DESCRIPTION2": "Nežna formula bogata hranljivim materijama, osmišljena za svakodnevno blagostanje svih uzrasta. Prirodno bez kofeina i umirujuće, pruža svakodnevnu zaštitu i podržava miran i opušten prelazak u san.",
+      "BUTTON": "NAHRANITE SE I OPUSTITE"
+    }
+  },
+  "SEO": {
+    "KEYWORDS_1": "Funkcionalna ishrana i zdravi napici",
+    "KEYWORDS_2": "magareće mleko",
+    "KEYWORDS_3": "dodaci ishrani na bazi magarećeg mleka",
+    "KEYWORDS_4": "Alternativa za kafu",
+    "KEYWORDS_5": "jutarnja energija bez kofeina",
+    "KEYWORDS_6": "oporavak posle treninga",
+    "KEYWORDS_7": "napitak za jačanje imuniteta",
+    "KEYWORDS_8": "podrška imunitetu",
+    "KEYWORDS_9": "prirodna vitalnost",
+    "KEYWORDS_10": "late napitak od rtanjskog čaja",
+    "KEYWORDS_11": "proteinski šejk sa magarećim mlekom",
+    "KEYWORDS_12": "komfort za digestivni sistem",
+    "KEYWORDS_13": "biljni late bez kofeina"
+  },
+  "NUTRITION": {
+    "TITLE": "Ishrana osmišljena za stvarni život.",
+    "SUBTITLE1": "Tri formule. Tri trenutka. Jedna filozofija: ",
+    "SUBTITLE2": "Čista funkcionalna ishrana, napravljena od liofilizovanog magarećeg mleka.",
+    "MORNING": {
+      "TITLE": "Jutarnji fokus",
+      "DESCRIPTION": "Smirena energija. Bistar um."
+    },
+    "AFTERNOON": {
+      "TITLE": "Popodnevni oporavak",
+      "DESCRIPTION": "Obnovite snagu. Održite energiju."
+    },
+    "EVENING": {
+      "TITLE": "Večernje opuštanje",
+      "DESCRIPTION": "Nahranite i zaštitite svoj imunitet. Duboko se opustite."
+    }
+  },
+  "WHY_IT_WORKS": {
+    "PAGE_TITLE": "ZAŠTO DELUJE",
+    "METHOD_TITLE": "Immunasina metoda",
+    "METHOD_SUBTITLE": "Četiri stuba funkcionalne izvrsnosti",
+    "STEP_1": {
+      "TITLE": "PRIRODA",
+      "DESCRIPTION": "Izuzetni sastojci sa autentičnim nasleđem."
+    },
+    "STEP_2": {
+      "TITLE": "NAUKA",
+      "DESCRIPTION": "Savremena obrada i formulacija zasnovana na naučnim dokazima."
+    },
+    "STEP_3": {
+      "TITLE": "FUNKCIJA",
+      "DESCRIPTION": "Osmišljeno prema svakodnevnim potrebama za blagostanjem."
+    },
+    "STEP_4": {
+      "TITLE": "DOŽIVLJAJ",
+      "DESCRIPTION": "Ukus, tekstura i ritual u kojima ljudi zaista uživaju."
+    },
+    "RTANJ_SECTION_TITLE": "RTANJ WILD LATTE",
+    "RTANJ_SUBTITLE": "Mistični napitak vitalnosti",
+    "RTANJ_INTRO": "Premium biljni latte inspirisan legendarnom planinom Rtanj.",
+    "RTANJ_DESCRIPTION": "Pažljivo formulisan spoj rtanjskog čaja, liofilizovanog magarećeg mleka, ovsa i prirodnog meda — kreiran kao savremeni svakodnevni ritual za dobrobit.",
+    "RTANJ_BUTTON": "OTKRIJTE RTANJ WILD LATTE",
+    "DONKEY_MILK_TITLE": "ZAŠTO MAGAREĆE MLEKO?",
+    "DONKEY_MILK_SUBTITLE": "Najređe mleko iz prirode",
+    "DONKEY_MILK_INTRO": "Korišćeno još od vremena drevnog Egipta i mediteranskih kultura, magareće mleko danas ponovo otkriva savremena nauka.",
+    "DONKEY_MILK_PRESERVATION": "Očuvano liofilizacijom (sušenjem zamrzavanjem) kako bi se sačuvala njegova bioaktivna svojstva.",
+    "DONKEY_MILK_BENEFIT_1_TITLE": "Bogato lizozimom i laktoferinom",
+    "DONKEY_MILK_BENEFIT_1_DESC": "Podržava prirodne odbrambene mehanizme organizma.",
+    "DONKEY_MILK_BENEFIT_2_TITLE": "Visoka svarljivost",
+    "DONKEY_MILK_BENEFIT_2_DESC": "Nežno prema digestivnom sistemu.",
+    "DONKEY_MILK_BENEFIT_3_TITLE": "Proteinski sastav sličan majčinom mleku",
+    "DONKEY_MILK_BENEFIT_3_DESC": "Prirodno uravnoteženo i lako se apsorbuje.",
+    "DONKEY_MILK_BENEFIT_4_TITLE": "Prirodno nežno i bogato hranljivim materijama",
+    "DONKEY_MILK_BENEFIT_4_DESC": "Bogat izvor esencijalnih vitamina i minerala."
   },
   "LEGEND": {
     "SECTION_TITLE": "MITSKA PLANINA SRBIJE",
@@ -115,7 +223,7 @@
     },
     "DONKEY_MILK_FOOTER_QUOTE_PART1": "Sačuvano procesom",
     "DONKEY_MILK_FOOTER_QUOTE_PART2": "liofilizacije",
-    "DONKEY_MILK_FOOTER_QUOTE_PART3": "(freeze-drying) kako bi se očuvao bioaktivni integritet.",
+    "DONKEY_MILK_FOOTER_QUOTE_PART3": "(freeze-drying) kako bi zadržalo svoj puni bioaktivni potencijal.",
     "WISDOM_TITLE": "MUDROST PRIRODE",
     "SCIENCE_TITLE": "SAVREMENA NAUKA",
     "WISDOM_SUBTITLE": "SNAGA TRADICIJE · POTVRĐENO NAUKOM"
@@ -234,7 +342,7 @@
     "SECTION_TITLE": "NAŠA KOLEKCIJA",
     "HEADING": "Immunasina ",
     "HEADING_SPAN": "Linija proizvoda",
-    "DESCRIPTION": "Pet jedinstvenih formulacija sa zajedničkom misijom — čista funkcionalna ishrana napravljena od liofilizovanog magarećeg mleka.",
+    "DESCRIPTION": "Tri jedinstvene formulacije sa zajedničkom misijom — čista funkcionalna ishrana napravljena od liofilizovanog magarećeg mleka.",
     "PRODUCT_1_BADGE": "GLAVNI PROIZVOD",
     "PRODUCT_1_NAME": "Rtanj Wild Latte",
     "PRODUCT_1_TAGLINE": "MISTIČNI NAPITAK VITALNOSTI",
@@ -345,16 +453,17 @@
   "FOOTER": {
     "TAGLINE": "Tradicija nas inspiriše. Nauka nas vodi. Dobrobit je naša misija.",
     "NAVIGATE_TITLE": "NAVIGACIJA",
-    "NAVIGATE_1": "Legenda",
-    "NAVIGATE_2": "Sastojci",
+    "NAVIGATE_1": "Rituali",
+    "NAVIGATE_2": "Zašto funkcioniše",
     "NAVIGATE_3": "Jedinstvena mešavina",
-    "NAVIGATE_4": "Ritual",
-    "NAVIGATE_5": "Naša kolekcija",
+    "NAVIGATE_4": "Naša kolekcija",
+    "NAVIGATE_5": "Naučna potvda",
+    "NAVIGATE_6": "Za partnere",
     "CONTACT_TITLE": "KONTAKT",
     "CONTACT_DESC": "Za porudžbine i dodatne informacije koristite obrazac iznad ili nas kontaktirajte na:",
     "CONTACT_EMAIL": "donkeymilkproteinshake@gmail.com",
     "SHIPPING": "Isporuka širom Evrope i sveta.",
     "COPYRIGHT": "© 2026 Immunasina · Sva prava zadržana · Napravljeno od liofilizovanog magarećeg mleka.",
-    "LOCATION": "Srbija · Rtanj · Čista funkcionalna ishrana"
+    "LOCATION": "Srbija · Beograd · Čista funkcionalna ishrana"
   }
 }
