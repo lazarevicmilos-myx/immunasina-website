@@ -108,11 +108,11 @@ export default function HeroSection() {
             {t("HERO.SUBTITLE")}
           </p>
           
-          <div className="flex flex-wrap items-center gap-6 mb-12">
+          <div className="grid grid-cols-2 gap-y-6 gap-x-2 md:flex md:flex-wrap md:justify-center items-center md:gap-6 mb-12">
             <span className="flex items-center space-x-2 text-sm tracking-widest uppercase font-bold text-[oklch(0.4_0.03_55)]">
               {/* Icon */}
               <div
-                className="flex items-center justify-center"
+                className="flex shrink-0 items-center justify-center"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -121,16 +121,16 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={IMMUNITY_PICT_IMG}
+                  src={IMMUNITY_PICT_IMG} alt={t("HERO.BENEFIT_1")}
                 />
               </div>
               <span className="text-[oklch(0.72_0.12_80)]">{t("HERO.BENEFIT_1")}</span>
             </span>
-            {/* <span className="text-[oklch(0.72_0.12_80)]">•</span> */}
+            <span className="hidden md:block text-[oklch(0.72_0.12_80)]">•</span>
             <span className="flex items-center space-x-2 text-sm tracking-widest uppercase font-bold text-[oklch(0.4_0.03_55)]">
               {/* Icon */}
               <div
-                className="flex items-center justify-center"
+                className="flex shrink-0 items-center justify-center"
                 style={{
                   width: "30px",
                   height: "30px",
@@ -139,15 +139,16 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={DIGESTIVITY_PICT_IMG}
+                  src={DIGESTIVITY_PICT_IMG} alt={t("HERO.BENEFIT_2")}
                 />
               </div>
               <span className="text-[oklch(0.72_0.12_80)]">{t("HERO.BENEFIT_2")}</span>
             </span>
+            <span className="hidden md:block text-[oklch(0.72_0.12_80)]">•</span>
             <span className="flex items-center space-x-2 text-sm tracking-widest uppercase font-bold text-[oklch(0.4_0.03_55)]">
               {/* Icon */}
               <div
-                className="flex items-center justify-center"
+                className="flex shrink-0 items-center justify-center"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -156,16 +157,16 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={VITALITY_PICT_IMG}
+                  src={VITALITY_PICT_IMG} alt={t("HERO.BENEFIT_3")}
                 />
               </div>
               <span className="text-[oklch(0.72_0.12_80)]">{t("HERO.BENEFIT_3")}</span>
             </span>
-            {/* <span className="text-[oklch(0.72_0.12_80)]">•</span> */}
+            <span className="hidden md:block text-[oklch(0.72_0.12_80)]">•</span>
             <span className="flex items-center space-x-2 text-sm tracking-widest uppercase font-bold text-[oklch(0.4_0.03_55)]">
               {/* Icon */}
               <div
-                className="flex items-center justify-center"
+                className="flex shrink-0 items-center justify-center"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -174,7 +175,7 @@ export default function HeroSection() {
                 }}
               >
                 <img
-                  src={EXPERIENCE_PICT_IMG}
+                  src={EXPERIENCE_PICT_IMG} alt={t("HERO.BENEFIT_4")}
                 />
               </div>
               <span className="text-[oklch(0.72_0.12_80)]">{t("HERO.BENEFIT_4")}</span>
