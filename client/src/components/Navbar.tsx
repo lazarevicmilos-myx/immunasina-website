@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between py-3 md:py-4">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-0 no-underline" style={{ maxWidth: "140px" }}>
+        <a href="#" className="flex items-center gap-0 no-underline w-24 md:w-[140px]">
           <img
             src={LOGO_URL}
             alt="Immunasina — Pure Functional Nutrition"
