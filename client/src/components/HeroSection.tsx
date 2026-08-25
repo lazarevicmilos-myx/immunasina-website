@@ -233,7 +233,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
+        className="hidden md:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2"
         style={{ color: "oklch(0.85 0.08 80 / 0.6)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em" }}
       >
         <span style={{ textTransform: "uppercase" }}>{t("HERO.SCROLL")}</span>

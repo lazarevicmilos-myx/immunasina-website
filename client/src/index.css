@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Global fix for fixed navigation bar overlapping anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Reserves an 80px buffer at the top of the viewport */
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
