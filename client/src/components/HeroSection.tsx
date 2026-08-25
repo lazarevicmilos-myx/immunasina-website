@@ -57,7 +57,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <div className="text-left">
           {/* H1 Section - Brand and Tagline */}
           <div className="mb-2 pt-16">
