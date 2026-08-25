@@ -184,7 +184,7 @@ export default function HeroSection() {
           
           {/* CTA buttons */}
           <div
-            className="hero-reveal flex flex-col sm:flex-row gap-4 justify-center"
+            className="hero-reveal flex flex-col sm:flex-row gap-4 justify-center items-center"
             style={{
               opacity: 0,
               transform: "translateY(24px)",
