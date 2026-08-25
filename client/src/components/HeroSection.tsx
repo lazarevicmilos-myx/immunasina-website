@@ -126,7 +126,7 @@ export default function HeroSection() {
               </div>
               <span className="text-[oklch(0.72_0.12_80)]">{t("HERO.BENEFIT_1")}</span>
             </span>
-            <span className="text-[oklch(0.72_0.12_80)]">•</span>
+            {/* <span className="text-[oklch(0.72_0.12_80)]">•</span> */}
             <span className="flex items-center space-x-2 text-sm tracking-widest uppercase font-bold text-[oklch(0.4_0.03_55)]">
               {/* Icon */}
               <div
@@ -161,7 +161,7 @@ export default function HeroSection() {
               </div>
               <span className="text-[oklch(0.72_0.12_80)]">{t("HERO.BENEFIT_3")}</span>
             </span>
-            <span className="text-[oklch(0.72_0.12_80)]">•</span>
+            {/* <span className="text-[oklch(0.72_0.12_80)]">•</span> */}
             <span className="flex items-center space-x-2 text-sm tracking-widest uppercase font-bold text-[oklch(0.4_0.03_55)]">
               {/* Icon */}
               <div
