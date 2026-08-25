@@ -15,31 +15,38 @@ export default function FormulationSection() {
 
   const ingredients = [
     {
-      number: "01",
+      number: t("FORMULATION.LAYER_1_NUMBER"),
       name: t("FORMULATION.LAYER_1_NAME"),
       latin: t("FORMULATION.LAYER_1_SCIENTIFIC"),
       desc: t("FORMULATION.LAYER_1_DESC"),
-      icon: "🌿",
-    },
-    {
-      number: "02",
-      name: t("FORMULATION.LAYER_2_NAME"),
-      latin: t("FORMULATION.LAYER_2_SCIENTIFIC"),
-      desc: t("FORMULATION.LAYER_2_DESC"),
       icon: "🥛",
     },
     {
-      number: "03",
+      number: t("FORMULATION.LAYER_2_NUMBER"),
+      name: t("FORMULATION.LAYER_2_NAME"),
+      latin: t("FORMULATION.LAYER_2_SCIENTIFIC"),
+      desc: t("FORMULATION.LAYER_2_DESC"),
+      icon: "🌿",
+    },
+    {
+      number: t("FORMULATION.LAYER_3_NUMBER"),
       name: t("FORMULATION.LAYER_3_NAME"),
       latin: t("FORMULATION.LAYER_3_SCIENTIFIC"),
       desc: t("FORMULATION.LAYER_3_DESC"),
       icon: "🍯",
     },
     {
-      number: "04",
+      number: t("FORMULATION.LAYER_4_NUMBER"),
       name: t("FORMULATION.LAYER_4_NAME"),
       latin: t("FORMULATION.LAYER_4_SCIENTIFIC"),
       desc: t("FORMULATION.LAYER_4_DESC"),
+      icon: "⚪",
+    },
+    {
+      number: t("FORMULATION.LAYER_5_NUMBER"),
+      name: t("FORMULATION.LAYER_5_NAME"),
+      latin: t("FORMULATION.LAYER_5_SCIENTIFIC"),
+      desc: t("FORMULATION.LAYER_5_DESC"),
       icon: "⚪",
     },
   ];
@@ -97,7 +104,7 @@ export default function FormulationSection() {
         </div>
 
         {/* Ingredient grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           {ingredients.map((ing, i) => (
             <div
               key={ing.number}
