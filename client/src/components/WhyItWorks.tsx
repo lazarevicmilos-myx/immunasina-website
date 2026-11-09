@@ -256,7 +256,7 @@ export default function WhyItWorks() {
               className="reveal"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                fontSize: "clamp(2rem, 3vw, 3.2rem)",
                 fontWeight: 600,
                 lineHeight: 1.1,
                 color: "oklch(0.22 0.04 55)",
