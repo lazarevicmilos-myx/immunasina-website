@@ -157,23 +157,23 @@ export default function SensorySection() {
         {/* Horizontal layout: Left boxes | Center image | Right boxes */}
         <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-stretch">
           {/* Left column: Creamy and Lightly Sweet */}
-          <div className="flex flex-col gap-6 lg:w-1/4">
+          <div className="flex flex-col gap-6 lg:w-1/4 lg:justify-between">
             <SenseCard sense={senses[0]} index={0} />
             <SenseCard sense={senses[2]} index={1} />
           </div>
 
           {/* Center column: Product image */}
-          <div className="reveal flex-1 flex items-center justify-center" style={{ aspectRatio: "1/1", minWidth: "280px", maxWidth: "640px" }}>
+          <div className="reveal relative flex aspect-square w-full max-w-80 items-center justify-center lg:aspect-auto lg:max-w-none lg:flex-1">
             <img
               src={PRODUCT_IMG}
               alt="Four Immunasina drinks: Rosehip & Matcha Latte, Bio-Active Protein Shake, Gentle Vitality Blend, and Rtanj Latte Wild"
-              className="w-full h-full object-cover rounded-lg"
+              className="absolute h-auto w-auto max-h-full max-w-full rounded-lg object-contain"
               loading="lazy"
             />
           </div>
 
           {/* Right column: Herbal and Texturally Unique */}
-          <div className="flex flex-col gap-6 lg:w-1/4">
+          <div className="flex flex-col gap-6 lg:w-1/4 lg:justify-between">
             <SenseCard sense={senses[1]} index={2} />
             <SenseCard sense={senses[3]} index={3} />
           </div>
