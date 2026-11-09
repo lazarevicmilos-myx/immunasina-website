@@ -12,8 +12,8 @@
     "TAGLINE": "CRAFTED FROM LYOPHILIZED DONKEY MILK",
     "H1_BRAND": "IMMUNASINA",
     "H1_TAGLINE": "PURE FUNCTIONAL NUTRITION",
-    "TITLE_PART1": "Three moments.",
-    "TITLE_PART2": "Three functional answers to what your body needs.",
+    "TITLE_PART1": "3 moments.",
+    "TITLE_PART2": "4 functional answers to what your body needs at any time of a day",
     "SUBTITLE": "What does your body need right now?",
     "BENEFIT_1": "IMMUNITY SUPPORT",
     "BENEFIT_2": "DIGESTIVE COMFORT",
@@ -78,8 +78,8 @@
   },
   "NUTRITION": {
     "TITLE": "Nutrition designed around real life.",
-    "SUBTITLE1": "Three formulations. Three moments. One philosophy: ",
-    "SUBTITLE2": "Pure functional nutrition crafted from lyophilized donkey milk.",
+    "SUBTITLE1": "4 formulations. 3 moments. 2 key ingredients. 1 philosophy: ",
+    "SUBTITLE2": "Pure functional nutrition crafted from lyophilized donkey milk and bioactive botanicals.",
     "MORNING": {
       "TITLE": "Morning Focus",
       "DESCRIPTION": "Calm energy. Clear mind."
@@ -467,9 +467,9 @@
     "NAVIGATE_6": "For Partners",
     "CONTACT_TITLE": "CONTACT",
     "CONTACT_DESC": "For orders and inquiries, use the order form above or reach us at:",
-    "CONTACT_EMAIL": "donkeymilkproteinshake@gmail.com",
+    "CONTACT_EMAIL": "immunasina@gmail.com",
     "SHIPPING": "Shipping accross Serbia.",
     "COPYRIGHT": "© 2026 Immunasina · All rights reserved · Crafted from Lyophilized Donkey Milk.",
-    "LOCATION": "Serbia · Belgrade · Pure Functional Nutrition"
+    "LOCATION": "Europe · Serbia · Pure Functional Nutrition"
   }
 }

@@ -12,8 +12,8 @@
     "TAGLINE": "NAPRAVLJENO OD LIOFILIZOVANOG MAGAREĆEG MLEKA",
     "H1_BRAND": "IMMUNASINA",
     "H1_TAGLINE": "ČISTA FUNKCIONALNA ISHRANA",
-    "TITLE_PART1": "Tri trenutka.",
-    "TITLE_PART2": "Tri funkcionalna odgovora na potrebe vašeg tela.",
+    "TITLE_PART1": "3 trenutka.",
+    "TITLE_PART2": "4 funkcionalna odgovora na potrebe vašeg tela u svako doba dana.",
     "SUBTITLE": "Šta je vašem telu potrebno upravo sada?",
     "BENEFIT_1": "PODRŠKA IMUNITETU",
     "BENEFIT_2": "KOMFOR ZA DIGESTIVNI SISTEM",
@@ -78,8 +78,8 @@
   },
   "NUTRITION": {
     "TITLE": "Ishrana osmišljena za stvarni život.",
-    "SUBTITLE1": "Tri formule. Tri trenutka. Jedna filozofija: ",
-    "SUBTITLE2": "Čista funkcionalna ishrana, napravljena od liofilizovanog magarećeg mleka.",
+    "SUBTITLE1": "4 formule. 2 trenutka. 2 ključna sastojka. 1 filozofija: ",
+    "SUBTITLE2": "Čista funkcionalna ishrana, napravljena od liofilizovanog magarećeg mleka i lekovitog bilja.",
     "MORNING": {
       "TITLE": "Jutarnji fokus",
       "DESCRIPTION": "Smirena energija. Bistar um."
@@ -467,9 +467,9 @@
     "NAVIGATE_6": "Za partnere",
     "CONTACT_TITLE": "KONTAKT",
     "CONTACT_DESC": "Za porudžbine i dodatne informacije koristite obrazac iznad ili nas kontaktirajte na:",
-    "CONTACT_EMAIL": "donkeymilkproteinshake@gmail.com",
+    "CONTACT_EMAIL": "immunasina@gmail.com",
     "SHIPPING": "Isporuka širom Srbije.",
     "COPYRIGHT": "© 2026 Immunasina · Sva prava zadržana · Napravljeno od liofilizovanog magarećeg mleka.",
-    "LOCATION": "Srbija · Beograd · Čista funkcionalna ishrana"
+    "LOCATION": "Evropa · Srbija · Čista funkcionalna ishrana"
   }
 }
