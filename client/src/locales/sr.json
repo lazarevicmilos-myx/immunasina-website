@@ -29,12 +29,12 @@
       "TITLE1": "JUTARNJI",
       "TITLE2": "RITUAL FOKUSA",
       "TIME": "8:30",
-      "SUBTITLE": "Bolji početak.",
-      "H1_BRAND": "RTANJ LATTE WILD",
-      "H1_TAGLINE": "STABILNA ENERGIJA I JASAN FOKUS",
-      "DESCRIPTION1": "Za jutra kada želite hranljiv početak, a ne samo još jednu kafu.",
-      "DESCRIPTION2": "Topao ili hladan, prijatan biljni latte koji izoštrava fokus i istovremeno prija vašem stomaku. Osmišljen da pruži stabilnu energiju i mirnu, budnu koncentraciju — bez nervoze, kiselosti i neprijatnog osećaja ubrzanog rada srca.",
-      "BUTTON": "ISTRAŽITE SVOJ JUTARNJI FOKUS"
+      "SUBTITLE": "Bolji početak dana.",
+      "H1_BRAND": "ROSEHIP & MATCHA LATTE",
+      "H1_TAGLINE": "PRIRODNA ENERGIJA I SVESNI FOKUS",
+      "DESCRIPTION1": "Za jutra kada želiš osvežavajuću alternativu svakodnevnoj kafi.",
+      "DESCRIPTION2": "Topao ili hladan, kremasti biljni latte koji kombinuje premium matcha zeleni čaj, ekstrakt šipurka i liofilizovano magareće mleko. Zahvaljujući prirodnom kofeinu iz matche, pruža osvežavajući početak dana uz nežne biljne note i uravnoteženu ishranu.",
+      "BUTTON": "ISTRAŽI SVOJ JUTARNJI FOKUS"
     },
     "AFTERNOON": {
       "TITLE1": "POPODNEVNI",
@@ -57,6 +57,17 @@
       "DESCRIPTION1": "Želite da usporite, pružite podršku imunitetu sebi i svojoj porodici i date telu nežnu, hranljivu negu pred spavanje.",
       "DESCRIPTION2": "Nežna formula bogata hranljivim materijama, osmišljena za svakodnevno blagostanje svih uzrasta. Prirodno bez kofeina i umirujuće, pruža svakodnevnu zaštitu i podržava miran i opušten prelazak u san.",
       "BUTTON": "NAHRANITE SE I OPUSTITE"
+    },
+    "ANYTIME": {
+      "TITLE1": "RITUAL",
+      "TITLE2": "RAVNOTEŽE",
+      "TIME": "U SVAKO DOBA",
+      "SUBTITLE": "Trenutak ravnoteže.",
+      "H1_BRAND": "RTANJ LATTE WILD",
+      "H1_TAGLINE": "BEZ KOFEINA, ZA PRIRODNU RAVNOTEŽU",
+      "DESCRIPTION1": "Za trenutke kada želiš da usporiš, obnoviš energiju i uživaš u prirodno prijatnom napitku.",
+      "DESCRIPTION2": "Topao ili hladan, kremasti biljni latte napravljen od liofilizovanog magarećeg mleka i aromatičnog rtanjskog čaja. Prirodno bez kofeina, sa nežnim biljnim notama i prijatnim, zaokruženim ukusom — savršen za mirno jutro, predah tokom dana ili opuštajuće veče.",
+      "BUTTON": "ISTRAŽI SVOJ RITUAL RAVNOTEŽE"
     }
   },
   "SEO": {

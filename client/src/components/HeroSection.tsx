@@ -84,8 +84,8 @@ export default function HeroSection() {
           </div>
 
           {/* Main Hero Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium leading-tight mb-4 text-[oklch(0.22_0.04_55)]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            {t("HERO.TITLE_PART1")}
+          <h2 className="text-[clamp(1.125rem,5.5vw,2.25rem)] lg:text-[clamp(1.75rem,3vw,2.5rem)] font-serif font-medium leading-tight mb-4 text-[oklch(0.22_0.04_55)]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="whitespace-nowrap">{t("HERO.TITLE_PART1")}</span>
             <br />
             {t("HERO.TITLE_PART2")}
           </h2>

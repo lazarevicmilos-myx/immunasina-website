@@ -30,10 +30,10 @@
       "TITLE2": "FOCUS RITUAL",
       "TIME": "8:30 AM",
       "SUBTITLE": "A better beginning.",
-      "H1_BRAND": "RTANJ LATTE WILD",
-      "H1_TAGLINE": "CLEAN ENERGY & MINDFUL FOCUS",
-      "DESCRIPTION1": "For the mornings when you want nourishment, not just another coffee.",
-      "DESCRIPTION2": "A warm or cold, comforting herbal latte that sharpens your focus while soothing your gut. Engineered to deliver a steady, calm state of alert performance — without caffeine jitters, acidity, or heart palpitations.",
+      "H1_BRAND": "ROSEHIP & MATCHA LATTE",
+      "H1_TAGLINE": "NATURAL ENERGY & MINDFUL FOCUS",
+      "DESCRIPTION1": "For the mornings when you want a refreshing alternative to your everyday coffee.",
+      "DESCRIPTION2": "A warm or cold, creamy botanical latte combining premium matcha green tea, rosehip extract, and lyophilized donkey milk. Naturally containing caffeine from matcha, it offers a refreshing way to start your day with gentle botanical notes and balanced nutrition.",
       "BUTTON": "EXPLORE YOUR MORNING FOCUS"
     },
     "AFTERNOON": {
@@ -57,6 +57,17 @@
       "DESCRIPTION1": "You want to slow down, protect yours and your family's immunity, and give your body gentle, nourishing care before bed.",
       "DESCRIPTION2": "A delicate, nutrient-dense blend formulated for general wellness across all ages. Naturally caffeine-free and soothing, it acts as a daily protective shield while promoting a calm, relaxed transition into sleep.",
       "BUTTON": "NOURISH & UNWIND"
+    },
+    "ANYTIME": {
+      "TITLE1": "THE ANYTIME",
+      "TITLE2": "BALANCE RITUAL",
+      "TIME": "ANYTIME",
+      "SUBTITLE": "A moment of balance.",
+      "H1_BRAND": "RTANJ LATTE WILD",
+      "H1_TAGLINE": "CAFFEINE-FREE COMFORT & NATURAL BALANCE",
+      "DESCRIPTION1": "For the moments when you want to slow down, recharge, and enjoy something naturally comforting.",
+      "DESCRIPTION2": "A warm or cold, creamy herbal latte crafted from lyophilized donkey milk and aromatic Rtanj mountain tea. Naturally caffeine-free, with delicate herbal notes and a smooth, comforting taste — perfect for a peaceful morning, a mindful afternoon break, or a relaxing evening.",
+      "BUTTON": "EXPLORE YOUR ANYTIME RITUAL"
     }
   },
   "SEO": {
