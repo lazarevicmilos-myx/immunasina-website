@@ -296,7 +296,7 @@ export default function Rituals() {
         <div className="absolute inset-0 bg-[oklch(0.98_0.01_80)]/60 pointer-events-none"></div>
         
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="max-w-2xl mb-16">
+          <div className="mb-16">
             <h2
               className="reveal"
               style={{
@@ -307,8 +307,10 @@ export default function Rituals() {
                 color: "oklch(0.22 0.04 55)",
               }}
             >
-              {t("NUTRITION.SUBTITLE1")}
-              <span style={{ color: "oklch(0.55 0.12 75)", fontStyle: "italic" }}>
+              <span className="block" style={{ fontSize: "clamp(1.5rem, 3vw, 2.75rem)" }}>
+                {t("NUTRITION.SUBTITLE1")}
+              </span>
+              <span className="block max-w-2xl" style={{ color: "oklch(0.55 0.12 75)", fontStyle: "italic" }}>
                 {t("NUTRITION.SUBTITLE2")}
               </span>
             </h2>
