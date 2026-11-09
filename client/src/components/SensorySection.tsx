@@ -7,7 +7,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "react-i18next";
 
-const PRODUCT_IMG = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20glass%20and%20cup%20modern.webp";
+const PRODUCT_IMG = "/images/immunasina-four-products.webp";
 
 
 
@@ -166,7 +166,7 @@ export default function SensorySection() {
           <div className="reveal flex-1 flex items-center justify-center" style={{ aspectRatio: "1/1", minWidth: "280px", maxWidth: "640px" }}>
             <img
               src={PRODUCT_IMG}
-              alt="Rtanj Boba Tea — the multi-sensory wellness experience"
+              alt="Four Immunasina drinks: Rosehip & Matcha Latte, Bio-Active Protein Shake, Gentle Vitality Blend, and Rtanj Latte Wild"
               className="w-full h-full object-cover rounded-lg"
               loading="lazy"
             />
