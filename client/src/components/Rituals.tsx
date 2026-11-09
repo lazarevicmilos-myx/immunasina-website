@@ -13,7 +13,6 @@ export default function Rituals() {
   const morningRitualImage = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/morning_ritual_01.webp";
   const afternoonRitualImage = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/afternoon_ritual_02.webp";
   const eveningRitualImage = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/evening_ritual_03.webp";
-  const anytimeRitualImage = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/hero_bck.webp";
 
   return (
     <div className="min-h-screen font-sans" style={{ backgroundColor: "oklch(0.97 0.015 80)", color: "oklch(0.22 0.04 55)" }}>
@@ -246,40 +245,60 @@ export default function Rituals() {
           </div>
         </div>
 
-        {/* Anytime Ritual — full-width panel below the original three categories */}
+        {/* Rtanj Wild Latte — full-width banner below the original three categories */}
         <section
           ref={anytimeRef as React.RefObject<HTMLElement>}
           aria-labelledby="anytime-ritual-heading"
-          className="w-full overflow-hidden border-t border-[oklch(0.9_0.02_80)] bg-[oklch(0.98_0.01_80)] p-6 sm:p-12 lg:p-16"
-          style={{ fontFamily: "'Lato', sans-serif" }}
+          className="relative w-full overflow-hidden border-t border-[oklch(0.9_0.02_80)] py-20 px-4 sm:px-6 lg:px-8"
+          style={{
+            backgroundImage: "url('https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/rtanj_latte_bkg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="min-w-0">
-              <p className="section-label mb-2">{t("RITUALS.ANYTIME.TIME")}</p>
-              <h2 id="anytime-ritual-heading" className="text-sm font-bold tracking-widest uppercase mb-6 text-[oklch(0.72_0.12_80)]">
-                {t("RITUALS.ANYTIME.TITLE1")} {t("RITUALS.ANYTIME.TITLE2")}
-              </h2>
-              <p className="text-3xl font-serif font-medium mb-4 text-[oklch(0.22_0.04_55)]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                {t("RITUALS.ANYTIME.SUBTITLE")}
-              </p>
-              <h3 className="text-3xl font-serif font-medium mb-4 text-[oklch(0.72_0.12_80)]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                {t("RITUALS.ANYTIME.H1_BRAND")}
-              </h3>
-              <p className="text-sm font-bold text-[oklch(0.4_0.02_55)] leading-relaxed mb-4">
-                {t("RITUALS.ANYTIME.H1_TAGLINE")}
-              </p>
-              <p className="reveal mb-4" style={{ fontSize: "1rem", lineHeight: 1.8, color: "oklch(0.40 0.03 60)" }}>
-                {t("RITUALS.ANYTIME.DESCRIPTION1")}
-              </p>
-              <p className="reveal mb-8" style={{ fontSize: "1rem", lineHeight: 1.8, color: "oklch(0.40 0.03 60)" }}>
-                {t("RITUALS.ANYTIME.DESCRIPTION2")}
-              </p>
-              <Button asChild className="h-auto w-full max-w-full whitespace-normal text-center sm:w-auto" style={{ backgroundColor: "oklch(0.265 0.055 120)", color: "white", padding: "1rem 2.5rem", fontFamily: "'Lato', sans-serif", fontSize: "0.8125rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", border: "none", cursor: "pointer", transition: "all 160ms cubic-bezier(0.23, 1, 0.32, 1)" }}>
-                <a href="#products">{t("RITUALS.ANYTIME.BUTTON")} &gt;</a>
-              </Button>
-            </div>
-            <div className="reveal min-w-0 overflow-hidden">
-              <img src={anytimeRitualImage} alt={t("RITUALS.ANYTIME.H1_BRAND")} loading="lazy" className="w-full h-auto aspect-[3/2] object-cover" />
+          <div aria-hidden="true" className="absolute inset-0 bg-[oklch(0.98_0.01_80)]/80 md:hidden pointer-events-none" />
+          <div className="max-w-6xl mx-auto relative z-10" style={{ fontFamily: "'Lato', sans-serif" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="min-w-0">
+                <h2
+                  id="anytime-ritual-heading"
+                  className="reveal mb-4"
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "clamp(1rem, 3vw, 2.2rem)",
+                    fontWeight: 600,
+                    lineHeight: 1.1,
+                    color: "oklch(0.22 0.04 55)",
+                  }}
+                >
+                  {t("RITUALS.ANYTIME.H1_BRAND")}
+                  <br />
+                  <span style={{ fontStyle: "italic", fontWeight: 600, fontSize: "0.7em", color: "oklch(0.55 0.12 75)" }}>
+                    {t("RITUALS.ANYTIME.SUBTITLE")}
+                  </span>
+                </h2>
+                <div className="reveal flex items-center gap-4 mb-6">
+                  <span style={{ width: "80px", height: "1px", background: "oklch(0.72 0.12 80)" }} />
+                  <span style={{ color: "oklch(0.72 0.12 80)", fontSize: "0.9rem" }}>✦</span>
+                  <span style={{ width: "80px", height: "1px", background: "oklch(0.72 0.12 80)" }} />
+                </div>
+                <p className="font-bold leading-relaxed mb-2">
+                  {t("RITUALS.ANYTIME.DESCRIPTION1")}
+                </p>
+                <p className="mb-8 leading-relaxed">
+                  {t("RITUALS.ANYTIME.DESCRIPTION2")}
+                </p>
+                <div className="text-white px-8 py-3 rounded-lg font-semibold">
+                  <a
+                    href="#products"
+                    className="btn-green max-w-full whitespace-normal text-center"
+                    style={{ padding: "0.8rem 2rem", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", display: "inline-block", color: "oklch(0.85 0.08 80)" }}
+                  >
+                    {t("RITUALS.ANYTIME.BUTTON")} &gt;
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>

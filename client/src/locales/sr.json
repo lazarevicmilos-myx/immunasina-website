@@ -62,12 +62,12 @@
       "TITLE1": "RITUAL",
       "TITLE2": "RAVNOTEŽE",
       "TIME": "U SVAKO DOBA",
-      "SUBTITLE": "Trenutak ravnoteže.",
+      "SUBTITLE": "Mistični napitak vitalnosti",
       "H1_BRAND": "RTANJ LATTE WILD",
       "H1_TAGLINE": "BEZ KOFEINA, ZA PRIRODNU RAVNOTEŽU",
-      "DESCRIPTION1": "Za trenutke kada želiš da usporiš, obnoviš energiju i uživaš u prirodno prijatnom napitku.",
-      "DESCRIPTION2": "Topao ili hladan, kremasti biljni latte napravljen od liofilizovanog magarećeg mleka i aromatičnog rtanjskog čaja. Prirodno bez kofeina, sa nežnim biljnim notama i prijatnim, zaokruženim ukusom — savršen za mirno jutro, predah tokom dana ili opuštajuće veče.",
-      "BUTTON": "ISTRAŽI SVOJ RITUAL RAVNOTEŽE"
+      "DESCRIPTION1": "Premium biljni latte inspirisan legendarnom planinom Rtanj. Za trenutke kada želiš da usporiš, obnoviš energiju i uživaš u prirodno prijatnom napitku.",
+      "DESCRIPTION2": "Pažljivo formulisan spoj aromatičnog rtanjskog čaja, liofilizovanog magarećeg mleka, ovsa i prirodnog meda — kreiran kao savremeni svakodnevni ritual za dobrobit. Topao ili hladan, ovaj kremasti biljni latte je prirodno bez kofeina, sa nežnim biljnim notama i prijatnim, zaokruženim ukusom — savršen za mirno jutro, predah tokom dana ili opuštajuće veče.",
+      "BUTTON": "OTKRIJTE RTANJ LATTE WILD"
     }
   },
   "SEO": {
@@ -124,11 +124,6 @@
       "TITLE": "DOŽIVLJAJ",
       "DESCRIPTION": "Ukus, tekstura i ritual u kojima ljudi zaista uživaju."
     },
-    "RTANJ_SECTION_TITLE": "RTANJ LATTE WILD",
-    "RTANJ_SUBTITLE": "Mistični napitak vitalnosti",
-    "RTANJ_INTRO": "Premium biljni latte inspirisan legendarnom planinom Rtanj.",
-    "RTANJ_DESCRIPTION": "Pažljivo formulisan spoj rtanjskog čaja, liofilizovanog magarećeg mleka, ovsa i prirodnog meda — kreiran kao savremeni svakodnevni ritual za dobrobit.",
-    "RTANJ_BUTTON": "OTKRIJTE RTANJ LATTE WILD",
     "DONKEY_MILK_TITLE": "ZAŠTO MAGAREĆE MLEKO?",
     "DONKEY_MILK_SUBTITLE": "Najređe mleko iz prirode",
     "DONKEY_MILK_INTRO": "Korišćeno još od vremena drevnog Egipta i mediteranskih kultura, magareće mleko danas ponovo otkriva savremena nauka.",

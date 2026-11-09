@@ -62,12 +62,12 @@
       "TITLE1": "THE ANYTIME",
       "TITLE2": "BALANCE RITUAL",
       "TIME": "ANYTIME",
-      "SUBTITLE": "A moment of balance.",
+      "SUBTITLE": "Mystical vitality brew",
       "H1_BRAND": "RTANJ LATTE WILD",
       "H1_TAGLINE": "CAFFEINE-FREE COMFORT & NATURAL BALANCE",
-      "DESCRIPTION1": "For the moments when you want to slow down, recharge, and enjoy something naturally comforting.",
-      "DESCRIPTION2": "A warm or cold, creamy herbal latte crafted from lyophilized donkey milk and aromatic Rtanj mountain tea. Naturally caffeine-free, with delicate herbal notes and a smooth, comforting taste — perfect for a peaceful morning, a mindful afternoon break, or a relaxing evening.",
-      "BUTTON": "EXPLORE YOUR ANYTIME RITUAL"
+      "DESCRIPTION1": "A premium herbal latte inspired by the legendary Rtanj Mountain. For the moments when you want to slow down, recharge, and enjoy something naturally comforting.",
+      "DESCRIPTION2": "A carefully formulated blend of aromatic Rtanj mountain tea, lyophilized donkey milk, oat, and natural honey — created as a modern daily wellness ritual. Served warm or cold, this creamy herbal latte is naturally caffeine-free, with delicate herbal notes and a smooth, comforting taste — perfect for a peaceful morning, a mindful afternoon break, or a relaxing evening.",
+      "BUTTON": "DISCOVER RTANJ LATTE WILD"
     }
   },
   "SEO": {
@@ -124,11 +124,6 @@
       "TITLE": "EXPERIENCE",
       "DESCRIPTION": "Taste, texture and ritual people actually enjoy."
     },
-    "RTANJ_SECTION_TITLE": "RTANJ LATTE WILD",
-    "RTANJ_SUBTITLE": "Mystical vitality brew",
-    "RTANJ_INTRO": "A premium herbal latte inspired by the legendary Rtanj Mountain.",
-    "RTANJ_DESCRIPTION": "A carefully formulat blend of Rtanj tea, lyophilized donkey milk, oat and natural honey — created as a modern daily wellness ritual.",
-    "RTANJ_BUTTON": "DISCOVER RTANJ LATTE WILD",
     "DONKEY_MILK_TITLE": "WHY DONKEY MILK?",
     "DONKEY_MILK_SUBTITLE": "Nature's Rarest Milk",
     "DONKEY_MILK_INTRO": "Used since ancient Egypt and Mediterranean traditions, donkey milk is now rediscovered by modern science.",
