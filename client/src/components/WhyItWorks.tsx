@@ -12,6 +12,7 @@ const PROTEIN_DROP_PICT_IMG = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.d
 
 export default function WhyItWorks() {
   const { ref: sectionRef } = useScrollReveal();
+  const { ref: milkRef } = useScrollReveal();
   const { t } = useTranslation();
 
   return (
@@ -237,20 +238,25 @@ export default function WhyItWorks() {
       </section>
 
       {/* Why Donkey Milk Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[oklch(0.95_0.02_80)]"
+      <section
+      ref={milkRef as React.RefObject<HTMLElement>}
+      className="relative py-24 bg-[oklch(0.95_0.02_80)] overflow-hidden"
       style={{
         backgroundImage: "url('https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/lyophilized_donkey_milk_glass_bkg.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed"}}
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="reveal section-label mb-6 normal-case">{t("INGREDIENTS.INGREDIENT_1_LABEL")}
+        <div aria-hidden="true" className="absolute inset-0 bg-[oklch(0.97_0.015_80)]/80 md:hidden pointer-events-none" />
+        <div className="container relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="min-w-0 flex flex-col gap-6 text-left">
+              <div className="reveal section-label">{t("INGREDIENTS.INGREDIENT_1_LABEL")}</div>
             <h2
-              className="reveal mb-4"
+              className="reveal"
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
-                fontSize: "clamp(1rem, 3vw, 2.2rem)",
+                fontSize: "clamp(2rem, 4vw, 3.2rem)",
                 fontWeight: 600,
                 lineHeight: 1.1,
                 color: "oklch(0.22 0.04 55)",
@@ -258,26 +264,25 @@ export default function WhyItWorks() {
             >
               {t("WHY_IT_WORKS.DONKEY_MILK_TITLE")}
               <br />
-              <span style={{ fontStyle: "italic", fontWeight: 600, fontSize: "0.7em", color: "oklch(0.55 0.12 75)" }}>
+              <span style={{ fontStyle: "italic", fontWeight: 400, fontSize: "0.7em", color: "oklch(0.55 0.12 75)" }}>
                 {t("WHY_IT_WORKS.DONKEY_MILK_SUBTITLE")}
               </span>
             </h2>
 
-            <div className="reveal flex items-center gap-4 mb-6">
+            <div className="reveal flex items-center gap-4">
               <span style={{ width: "80px", height: "1px", background: "oklch(0.72 0.12 80)" }} />
               <span style={{ color: "oklch(0.72 0.12 80)", fontSize: "0.9rem" }}>✦</span>
               <span style={{ width: "80px", height: "1px", background: "oklch(0.72 0.12 80)" }} />
             </div>
 
-            <p className="reveal mb-4"
-                style={{ fontFamily: "'Lato', sans-serif", fontSize: "1rem", lineHeight: 1.8, color: "oklch(0.40 0.03 60)" }}
+            <p className="reveal"
+                style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.95rem", lineHeight: 1.8, color: "oklch(0.40 0.03 60)" }}
               >
               {t('WHY_IT_WORKS.DONKEY_MILK_INTRO')}
             </p>
-          </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="reveal grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6 pt-2">
             {/* Benefit 1 */}
             <div className="flex gap-4 rounded-lg"
               style={{ border: "2px solid oklch(0.72 0.12 80 / 0.25)" }}
@@ -297,11 +302,11 @@ export default function WhyItWorks() {
                   />
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="min-w-0">
+                <h3 className="mb-2" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", fontWeight: 700, color: "oklch(0.22 0.04 55)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_1_TITLE')}
                 </h3>
-                <p className="text-gray-600">
+                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", lineHeight: 1.5, color: "oklch(0.50 0.03 65)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_1_DESC')}
                 </p>
               </div>
@@ -326,11 +331,11 @@ export default function WhyItWorks() {
                   />
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="min-w-0">
+                <h3 className="mb-2" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", fontWeight: 700, color: "oklch(0.22 0.04 55)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_2_TITLE')}
                 </h3>
-                <p className="text-gray-600">
+                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", lineHeight: 1.5, color: "oklch(0.50 0.03 65)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_2_DESC')}
                 </p>
               </div>
@@ -355,11 +360,11 @@ export default function WhyItWorks() {
                   />
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="min-w-0">
+                <h3 className="mb-2" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", fontWeight: 700, color: "oklch(0.22 0.04 55)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_3_TITLE')}
                 </h3>
-                <p className="text-gray-600">
+                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", lineHeight: 1.5, color: "oklch(0.50 0.03 65)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_3_DESC')}
                 </p>
               </div>
@@ -384,11 +389,11 @@ export default function WhyItWorks() {
                   />
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="min-w-0">
+                <h3 className="mb-2" style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.8rem", fontWeight: 700, color: "oklch(0.22 0.04 55)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_4_TITLE')}
                 </h3>
-                <p className="text-gray-600">
+                <p style={{ fontFamily: "'Lato', sans-serif", fontSize: "0.75rem", lineHeight: 1.5, color: "oklch(0.50 0.03 65)" }}>
                   {t('WHY_IT_WORKS.DONKEY_MILK_BENEFIT_4_DESC')}
                 </p>
               </div>
@@ -407,6 +412,8 @@ export default function WhyItWorks() {
               </p>
             </div>
 
+          </div>
+            </div>
           </div>
         </div>
       </section>
