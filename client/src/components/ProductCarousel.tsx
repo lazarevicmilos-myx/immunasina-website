@@ -34,18 +34,18 @@ export default function ProductCarousel() {
       price: t("PRODUCTS.PRODUCT_1_PRICE"),
       isHero: true,
     },
-    // {
-    //   id: "boba",
-    //   name: t("PRODUCTS.PRODUCT_2_NAME"),
-    //   tagline: t("PRODUCTS.PRODUCT_2_TAGLINE"),
-    //   description: t("PRODUCTS.PRODUCT_2_DESC"),
-    //   standout: t("PRODUCTS.PRODUCT_2_STANDOUT"),
-    //   texture: t("PRODUCTS.PRODUCT_2_TEXTURE"),
-    //   bestFor: t("PRODUCTS.PRODUCT_2_BEST"),
-    //   weight: t("PRODUCTS.PRODUCT_2_SIZE"),
-    //   servings: t("PRODUCTS.PRODUCT_2_SERVINGS"),
-    //   price: t("PRODUCTS.PRODUCT_2_PRICE"),
-    // },
+    {
+      id: "matcha",
+      name: t("PRODUCTS.PRODUCT_2_NAME"),
+      tagline: t("PRODUCTS.PRODUCT_2_TAGLINE"),
+      description: t("PRODUCTS.PRODUCT_2_DESC"),
+      standout: t("PRODUCTS.PRODUCT_2_STANDOUT"),
+      texture: t("PRODUCTS.PRODUCT_2_TEXTURE"),
+      bestFor: t("PRODUCTS.PRODUCT_2_BEST"),
+      weight: t("PRODUCTS.PRODUCT_2_SIZE"),
+      servings: t("PRODUCTS.PRODUCT_2_SERVINGS"),
+      price: t("PRODUCTS.PRODUCT_2_PRICE"),
+    },
     {
       id: "protein",
       name: t("PRODUCTS.PRODUCT_3_NAME"),
@@ -89,8 +89,8 @@ export default function ProductCarousel() {
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   const bannerImages: Record<string, string> = {
-    latte: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Wild%20Latte%20cup.webp",
-    boba: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Boba%20Tea%20promo%20banner-1.webp",
+    latte: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Rtanj%20Wild%20Latte%20glass.webp",
+    matcha: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Rosehip%20Matcha%20Latte%20cup.webp",
     protein: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Bio-Active%20protein%20shake%20promo%20banner.webp",
     shake: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Gentle%20Vitality%20Blend%20promo%20banner.webp",
     coffee: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Immuno-Brew%203in1%20promo%20banner.webp",
@@ -154,7 +154,7 @@ export default function ProductCarousel() {
         <div className="relative">
           {/* Optimized Heights to dynamically hug the newly upscaled images */}
           <div 
-            className="relative min-h-[700px] sm:min-h-[720px] md:min-h-[0px] md:h-[540px] overflow-hidden rounded-lg" 
+            className="relative min-h-[700px] sm:min-h-[720px] md:min-h-[0px] md:h-[640px] lg:h-[540px] overflow-hidden rounded-lg"
             onMouseEnter={() => setIsAutoPlay(false)} 
             onMouseLeave={() => setIsAutoPlay(true)}
           >
@@ -171,7 +171,7 @@ export default function ProductCarousel() {
                   className="h-full w-full flex flex-col md:flex-row items-center justify-between p-6 md:p-12 rounded-lg gap-4 md:gap-0" 
                   style={{
                     backgroundColor: product.id === 'latte' ? "oklch(63.503% 0.09391 116.62 / 0.812)" :
-                    product.id === 'boba' ? "oklch(78.144% 0.12155 80.533)" :
+                    product.id === 'matcha' ? "oklch(0.93 0.025 120)" :
                     product.id === 'coffee' ? "oklch(40.975% 0.06601 80.077)" :
                     product.id === 'shake' ? "oklch(67.517% 0.08469 70.968 / 0.812)" :
                     "oklch(0.95 0.01 80)"
@@ -188,7 +188,7 @@ export default function ProductCarousel() {
                       {product.name}
                     </h3>
                     <p className="text-xs md:text-sm tracking-widest uppercase mb-3 md:mb-4" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
-                    product.id === 'boba' ? "oklch(0.95 0.01 80)" :
+                    product.id === 'matcha' ? "oklch(0.40 0.03 60)" :
                     product.id === 'shake' ? "oklch(0.95 0.01 80)" : "oklch(0.65 0.08 80)" }}>
                       {product.tagline}
                     </p>
@@ -207,7 +207,7 @@ export default function ProductCarousel() {
                     <div className="flex justify-center md:justify-start gap-6 text-xs md:text-sm">
                       <div>
                         <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
-                        product.id === 'boba' ? "oklch(0.95 0.01 80)" :
+                        product.id === 'matcha' ? "oklch(0.40 0.03 60)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
                           {t("PRODUCTS.SIZE_LABEL")}
@@ -218,7 +218,7 @@ export default function ProductCarousel() {
                       </div>
                       <div>
                         <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
-                        product.id === 'boba' ? "oklch(0.95 0.01 80)" :
+                        product.id === 'matcha' ? "oklch(0.40 0.03 60)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
                           {t("PRODUCTS.SERVINGS_LABEL")}
@@ -229,12 +229,12 @@ export default function ProductCarousel() {
                       </div>
                       <div>
                         <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
-                        product.id === 'boba' ? "oklch(0.95 0.01 80)" :
+                        product.id === 'matcha' ? "oklch(0.40 0.03 60)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
                           {t("PRODUCTS.PRICE_LABEL")}
                         </p>
-                        <p className="font-semibold" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" : product.id === 'boba' ? "oklch(0.95 0.01 80)" :
+                        <p className="font-semibold" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" : product.id === 'matcha' ? "oklch(0.22 0.04 55)" :
                         product.id === 'shake' ? "oklch(0.95 0.01 80)" :
                         product.id === 'coffee' ? "oklch(0.72 0.12 80)" : "oklch(0.65 0.08 80)" }}>
                           {product.price}
@@ -245,7 +245,7 @@ export default function ProductCarousel() {
 
                   {/* Visual Indicator - Maximized Mobile Aspect Ratios to Populate Void */}
                   <div 
-                    className="flex items-center justify-center w-72 h-72 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full shrink-0 mt-2 md:mt-0 overflow-hidden" 
+                    className="flex items-center justify-center w-72 h-72 sm:w-80 sm:h-80 md:w-64 md:h-64 lg:w-96 lg:h-96 rounded-full shrink-0 mt-2 md:mt-0 overflow-hidden"
                     style={{ backgroundColor: product.id === 'latte' ? "oklch(0.35 0.04 55)" : "oklch(0.92 0.01 80)" }}
                   >
                     <img
