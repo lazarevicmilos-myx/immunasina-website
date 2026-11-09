@@ -7,7 +7,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "react-i18next";
 
-const PRODUCT_IMG = "/images/immunasina-four-products.webp";
+const PRODUCT_IMG = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/multi_sensory_experience_bkg.webp";
 
 
 
