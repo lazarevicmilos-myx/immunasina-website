@@ -238,11 +238,11 @@ export default function WhyItWorks() {
 
       {/* Why Donkey Milk Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[oklch(0.95_0.02_80)]"
-      // style={{
-      //   backgroundImage: "url('https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20donkey.webp')",
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   backgroundAttachment: "fixed"}}
+      style={{
+        backgroundImage: "url('https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/lyophilized_donkey_milk_glass_bkg.webp')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"}}
       >
         <div className="max-w-6xl mx-auto">
           <div className="reveal section-label mb-6 normal-case">{t("INGREDIENTS.INGREDIENT_1_LABEL")}
