@@ -70,18 +70,6 @@ export default function ProductCarousel() {
       servings: t("PRODUCTS.PRODUCT_4_SERVINGS"),
       price: t("PRODUCTS.PRODUCT_4_PRICE"),
     },
-    // {
-    //   id: "coffee",
-    //   name: t("PRODUCTS.PRODUCT_5_NAME"),
-    //   tagline: t("PRODUCTS.PRODUCT_5_TAGLINE"),
-    //   description: t("PRODUCTS.PRODUCT_5_DESC"),
-    //   standout: t("PRODUCTS.PRODUCT_5_STANDOUT"),
-    //   texture: t("PRODUCTS.PRODUCT_5_TEXTURE"),
-    //   bestFor: t("PRODUCTS.PRODUCT_5_BEST"),
-    //   weight: t("PRODUCTS.PRODUCT_5_SIZE"),
-    //   servings: t("PRODUCTS.PRODUCT_5_SERVINGS"),
-    //   price: t("PRODUCTS.PRODUCT_5_PRICE"),
-    // },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -93,7 +81,6 @@ export default function ProductCarousel() {
     matcha: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Rosehip%20Matcha%20Latte%20cup.webp",
     protein: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Bio-Active%20protein%20shake%20promo%20banner.webp",
     shake: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Gentle%20Vitality%20Blend%20promo%20banner.webp",
-    coffee: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Immuno-Brew%203in1%20promo%20banner.webp",
   };
 
   const goToSlide = (index: number) => {
