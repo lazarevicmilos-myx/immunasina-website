@@ -261,6 +261,9 @@ export default function Rituals() {
           <div className="max-w-6xl mx-auto relative z-10" style={{ fontFamily: "'Lato', sans-serif" }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="min-w-0">
+                <p className="text-sm font-bold tracking-widest uppercase mb-4 text-[oklch(0.72_0.12_80)]">
+                  {t("RITUALS.ANYTIME.TITLE1")} {t("RITUALS.ANYTIME.TITLE2")}
+                </p>
                 <h2
                   id="anytime-ritual-heading"
                   className="reveal mb-4"
