@@ -38,7 +38,7 @@ describe("consent-gated analytics", () => {
     analytics.applyConsent("granted");
     analytics.trackPageView();
     expect(append).toHaveBeenCalledTimes(1);
-    expect(append.mock.calls[0][0].src).toBe('https://www.googletagmanager.com/gtm.js?id=GTM-K46Z6HCT');
+    expect(append.mock.calls[0][0].src).toBe('https://www.googletagmanager.com/gtm.js?id=GTM-WNMJ2GZM');
     window.location.pathname = "/en";
     document.title = "English title";
     document.documentElement.lang = "en";

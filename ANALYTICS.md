@@ -1,13 +1,13 @@
 # Google Tag Manager and GA4
 
-The website loads container **GTM-K46Z6HCT** after analytics consent. GA4 **G-WN5P40SDHF** is configured inside that container. The site no longer loads gtag.js directly or sends GA4 config/event commands. Its gtag function is used only to queue consent commands before GTM loads, following Google's basic consent mode example.
+The website loads container **GTM-WNMJ2GZM** after analytics consent. GA4 **G-WN5P40SDHF** is configured inside that container. The site no longer loads gtag.js directly or sends GA4 config/event commands. Its gtag function is used only to queue consent commands before GTM loads, following Google's basic consent mode example.
 
 ## Finish the setup in Google
 
 The source changes do not publish your GTM workspace. Import the prepared configuration before deploying the website migration:
 
-1. Open container **GTM-K46Z6HCT**, then **Admin → Import Container**.
-2. Select **analytics/GTM-K46Z6HCT.json** and choose your workspace.
+1. Open container **GTM-WNMJ2GZM**, then **Admin → Import Container**.
+2. Select **analytics/GTM-WNMJ2GZM.json** and choose your workspace.
 3. Choose **Merge**, review the preview, and import. The file contains two tags, one custom event trigger, and four data-layer variables. It contains no advertising tags. Avoid keeping another GA4 configuration or page-view tag for the same stream.
 4. Inspect **Immunasina - Google tag**: ID **G-WN5P40SDHF**; configuration parameters **send_page_view = false**, **allow_google_signals = false**, **allow_ad_personalization_signals = false**. It is a setup tag, once per page, with no independent trigger.
 5. Inspect **Immunasina - GA4 page view**: event **page_view**, measurement ID **G-WN5P40SDHF**; trigger **immunasina_page_view**. Its tag sequencing runs **Immunasina - Google tag** first and stops on setup failure. Parameters page_location, page_title, page_referrer, and language come from the matching data-layer variables.
@@ -35,7 +35,7 @@ VITE_GTM_CONTAINER_ID overrides the container ID at build time. VITE_GA_MEASUREM
 ## Verification after deployment
 
 1. Fresh session: no gtm.js, gtag.js, or analytics collection requests before acceptance or after rejection.
-2. Accept: gtm.js loads once with GTM-K46Z6HCT. In Preview, the Google setup tag precedes the first GA4 page-view tag.
+2. Accept: gtm.js loads once with GTM-WNMJ2GZM. In Preview, the Google setup tag precedes the first GA4 page-view tag.
 3. Confirm analytics_storage is granted and all three advertising consent types remain denied.
 4. Switch /sr → /en, then Back: each navigation creates one page_view with the matching URL and localized title. Anchor clicks create none.
 5. Reject via Cookie settings: page reloads; no more tracking requests. Reload again to confirm the rejection persists.

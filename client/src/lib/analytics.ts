@@ -1,5 +1,5 @@
 export const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID || "G-WN5P40SDHF";
-export const containerId = import.meta.env.VITE_GTM_CONTAINER_ID || "GTM-K46Z6HCT";
+export const containerId = import.meta.env.VITE_GTM_CONTAINER_ID || "GTM-WNMJ2GZM";
 export const consentKey = "immunasina.analytics-consent.v1";
 export const settingsEvent = "immunasina:analytics-settings";
 export type AnalyticsConsent = "granted" | "denied";
