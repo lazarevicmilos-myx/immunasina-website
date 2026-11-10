@@ -1,4 +1,12 @@
 {
+  "ANALYTICS": {
+    "TITLE": "Vaš izbor privatnosti",
+    "DESCRIPTION": "Uz vašu saglasnost koristimo kolačiće Google analitike da bismo razumeli kako posetioci koriste ovaj sajt. Analitika je isključena dok je ne prihvatite. Svoj izbor možete promeniti u bilo kom trenutku putem opcije Podešavanja kolačića u podnožju stranice.",
+    "ACCEPT": "Prihvati analitiku",
+    "REJECT": "Odbij analitiku",
+    "SETTINGS": "Podešavanja kolačića",
+    "CLOSE": "Zatvori"
+  },
   "NAV": {
     "LEGEND": "LEGENDA",
     "INGREDIENTS": "SASTOJCI",
@@ -69,6 +77,12 @@
       "DESCRIPTION2": "Pažljivo formulisan spoj aromatičnog rtanjskog čaja, liofilizovanog magarećeg mleka, ovsa i prirodnog meda — kreiran kao savremeni svakodnevni ritual za dobrobit. Topao ili hladan, ovaj kremasti biljni latte je prirodno bez kofeina, sa nežnim biljnim notama i prijatnim, zaokruženim ukusom — savršen za mirno jutro, predah tokom dana ili opuštajuće veče.",
       "BUTTON": "OTKRIJTE RTANJ LATTE WILD"
     }
+  },
+  "NOT_FOUND": {
+    "SEO_TITLE": "Stranica nije pronađena | Immunasina",
+    "TITLE": "Stranica nije pronađena",
+    "DESCRIPTION": "Žao nam je, stranica koju tražite ne postoji. Možda je premeštena ili obrisana.",
+    "BUTTON": "Početna strana"
   },
   "SEO": {
     "TITLE": "Immunasina | Magareće mleko, proteinski šejk i Rtanj late",

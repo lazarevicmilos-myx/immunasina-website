@@ -1,4 +1,12 @@
 {
+  "ANALYTICS": {
+    "TITLE": "Your privacy choices",
+    "DESCRIPTION": "With your permission, we use Google Analytics cookies to understand how visitors use this website. Analytics stays off unless you accept. You can change your choice at any time using Cookie settings in the footer.",
+    "ACCEPT": "Accept analytics",
+    "REJECT": "Reject analytics",
+    "SETTINGS": "Cookie settings",
+    "CLOSE": "Close"
+  },
   "NAV": {
     "LEGEND": "THE LEGEND",
     "INGREDIENTS": "INGREDIENTS",
@@ -69,6 +77,12 @@
       "DESCRIPTION2": "A carefully formulated blend of aromatic Rtanj mountain tea, lyophilized donkey milk, oat, and natural honey — created as a modern daily wellness ritual. Served warm or cold, this creamy herbal latte is naturally caffeine-free, with delicate herbal notes and a smooth, comforting taste — perfect for a peaceful morning, a mindful afternoon break, or a relaxing evening.",
       "BUTTON": "DISCOVER RTANJ LATTE WILD"
     }
+  },
+  "NOT_FOUND": {
+    "SEO_TITLE": "Page not found | Immunasina",
+    "TITLE": "Page Not Found",
+    "DESCRIPTION": "Sorry, the page you are looking for does not exist. It may have been moved or deleted.",
+    "BUTTON": "Go Home"
   },
   "SEO": {
     "TITLE": "Immunasina | Donkey Milk Protein Shakes & Rtanj Tea Lattes",

@@ -1,3 +1,4 @@
+import { localizeHtml } from "./shared/seo";
 import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
@@ -153,7 +154,14 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+const localizedSeoPlugin: Plugin = {
+  name: "localized-seo",
+  transformIndexHtml(html, ctx) {
+    return localizeHtml(html, ctx.path === "/index.html" ? "/sr" : ctx.path);
+  },
+};
+
+const plugins = [localizedSeoPlugin, react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
   plugins,

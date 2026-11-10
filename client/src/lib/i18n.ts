@@ -1,11 +1,10 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import { defaultLanguage, languageFromPath } from "@shared/localization";
 import enTranslations from '../locales/en.json';
 import srTranslations from '../locales/sr.json';
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
@@ -17,11 +16,8 @@ i18n
       en: { translation: enTranslations },
       sr: { translation: srTranslations },
     },
-    lng: 'sr',
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-    },
+    supportedLngs: ["en", "sr"],
+    lng: languageFromPath(window.location.pathname) ?? defaultLanguage,
   });
 
 export default i18n;

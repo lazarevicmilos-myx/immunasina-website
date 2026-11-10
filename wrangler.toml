@@ -9,3 +9,6 @@ compatibility_flags = ["nodejs_compat"]
 [assets]
 directory = "./dist/public"
 binding = "ASSETS"
+html_handling = "none"
+# Localize HTML before serving it, including direct links and crawler requests.
+run_worker_first = true

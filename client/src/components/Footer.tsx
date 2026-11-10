@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { settingsEvent } from "@/lib/analytics";
 
 const LOGO_URL = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20logo%20short.webp";
 
@@ -121,6 +122,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
+        <button type="button" onClick={() => window.dispatchEvent(new Event(settingsEvent))} className="mb-5 text-sm text-stone-300 underline underline-offset-4 hover:text-white">
+          {t("ANALYTICS.SETTINGS")}
+        </button>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p
             style={{

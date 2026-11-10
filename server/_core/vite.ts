@@ -1,3 +1,5 @@
+import { localizedPage, redirectLocalizedPage } from "../localizedPages";
+import { pageInfo } from "../../shared/localization";
 import express, { type Express } from "express";
 import fs from "fs";
 import { type Server } from "http";
@@ -21,6 +23,7 @@ export async function setupVite(app: Express, server: Server) {
   });
 
   app.use(vite.middlewares);
+  app.use(redirectLocalizedPage);
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
 
@@ -39,7 +42,7 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx?v=${nanoid()}"`
       );
       const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      res.status(pageInfo(req.path).isHome ? 200 : 404).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);
@@ -58,10 +61,9 @@ export function serveStatic(app: Express) {
     );
   }
 
-  app.use(express.static(distPath));
+  app.use(redirectLocalizedPage);
+  app.use(express.static(distPath, { index: false }));
 
   // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
-  });
+  app.use("*", localizedPage(path.resolve(distPath, "index.html")));
 }

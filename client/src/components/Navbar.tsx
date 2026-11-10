@@ -5,6 +5,8 @@
  * Language toggle: EN/SR with localStorage persistence
  */
 
+import { useLocation } from "wouter";
+import { localizedPath, type Language } from "@shared/localization";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +14,7 @@ const LOGO_URL = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina
 
 export default function Navbar() {
   const { i18n, t } = useTranslation();
+  const [, navigate] = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,8 +24,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLanguageChange = (lang: string) => {
-    i18n.changeLanguage(lang);
+  const handleLanguageChange = (lang: Language) => {
+    navigate(localizedPath(window.location.pathname, lang) + window.location.search + window.location.hash);
     try {
       localStorage.setItem("preferredLanguage", lang);
     } catch (error) {
