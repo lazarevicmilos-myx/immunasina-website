@@ -8,20 +8,18 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { productInterestSchema } from "@shared/productInterest";
+import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
 const PACKAGE_IMAGES: Record<string, string> = {
   matcha: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Rosehip%20%26%20Matcha%20Latte%20package%20image.webp",
   latte: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Wild%20Latte%20small%20pack%20%2B%20box.webp",
-  boba: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Boba%20Tea%20small%20pack%20%2B%20box.webp",
   protein: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Bio_active%20Protein%20Shake%20small%20pack%20%2B%20box.webp",
   shake: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Gentle%20Vitality%20Blend%20small%20pack%20%2B%20box.webp",
-  coffee: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Immuno-Brew%203in1%20small%20pack%20%2B%20box.webp",
 };
 
 export default function OrderSection() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { ref } = useScrollReveal();
   const [selected, setSelected] = useState("latte");
   const [formData, setFormData] = useState({ name: "", email: "", country: "", notes: "" });
@@ -61,45 +59,29 @@ export default function OrderSection() {
       price: t("ORDER.PRODUCT_4_PRICE"),
       priceNote: t("ORDER.PRODUCT_4_PRICE_NOTE"),
     },
-    // {
-    //   id: "coffee",
-    //   name: t("ORDER.PRODUCT_5_NAME"),
-    //   size: t("ORDER.PRODUCT_5_SIZE"),
-    //   servings: t("ORDER.PRODUCT_5_SERVINGS"),
-    //   price: t("ORDER.PRODUCT_5_PRICE"),
-    //   priceNote: t("ORDER.PRODUCT_5_PRICE_NOTE"),
-    // },
   ];
+
+  const submitOrderMutation = trpc.orders.submitInquiry.useMutation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isSubmitting) return;
     setIsSubmitting(true);
 
     try {
-      const payload = productInterestSchema.parse({
-        productId: selected,
+      await submitOrderMutation.mutateAsync({
+        productId: selected as "latte" | "matcha" | "protein" | "shake",
         fullName: formData.name,
         email: formData.email,
         country: formData.country,
         notes: formData.notes || undefined,
-        language: i18n.resolvedLanguage?.startsWith("sr") ? "sr" : "en",
       });
-      const response = await fetch("/api/product-interest", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        signal: AbortSignal.timeout(15000),
-      });
-      if (!response.ok || (await response.json()).success !== true) {
-        throw new Error("Interest was not saved");
-      }
 
       setSubmitted(true);
       setFormData({ name: "", email: "", country: "", notes: "" });
-      toast.success(t("ORDER.SUBMITTED_TITLE"));
+      toast.success("Order inquiry submitted successfully!");
     } catch (error) {
-      toast.error(t("ORDER.SUBMIT_ERROR"));
+      console.error("Failed to submit order:", error);
+      toast.error("Failed to submit order inquiry. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -259,7 +241,7 @@ export default function OrderSection() {
           }}
         >
             {submitted ? (
-              <div role="status" className="flex flex-col items-center justify-center gap-6 py-12 text-center">
+              <div className="flex flex-col items-center justify-center gap-6 py-12 text-center">
                 <div style={{ color: "oklch(0.72 0.12 80)", fontSize: "2.5rem" }}>✦</div>
                 <h3
                   style={{
@@ -359,8 +341,6 @@ export default function OrderSection() {
                         type={field.type}
                         placeholder={field.placeholder}
                         required={field.required}
-                        maxLength={field.id === "email" ? 254 : field.id === "country" ? 100 : 200}
-                        disabled={isSubmitting}
                         value={formData[field.id as keyof typeof formData]}
                         onChange={(e) => setFormData({ ...formData, [field.id]: e.target.value })}
                         style={{
@@ -404,8 +384,6 @@ export default function OrderSection() {
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       rows={4}
-                      maxLength={2000}
-                      disabled={isSubmitting}
                       style={{
                         fontFamily: "'Lato', sans-serif",
                         fontSize: "0.875rem",
