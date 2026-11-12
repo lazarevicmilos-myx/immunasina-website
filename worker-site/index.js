@@ -1,9 +1,13 @@
 import { localizeHtml } from '../shared/seo.ts';
 import { pageInfo, pageRedirect } from '../shared/localization.ts';
+import { submitProductInterest } from './product-interest.js';
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/product-interest') {
+      return submitProductInterest(request, env);
+    }
     if (!['GET', 'HEAD'].includes(request.method) ||
         (url.pathname.includes('.') && url.pathname !== '/index.html') ||
         url.pathname.startsWith('/api/')) {

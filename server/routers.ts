@@ -25,7 +25,7 @@ export const appRouter = router({
     submitInquiry: publicProcedure
       .input(
         z.object({
-          productId: z.enum(["latte", "boba", "protein", "shake", "coffee"]),
+          productId: z.enum(["latte", "matcha", "boba", "protein", "shake", "coffee"]),
           fullName: z.string().min(1, "Full name is required"),
           email: z.string().email("Valid email is required"),
           country: z.string().min(1, "Country is required"),

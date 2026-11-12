@@ -43,6 +43,7 @@ export type InsertOrderInquiry = typeof orderInquiries.$inferInsert;
 
 // Product catalog for reference
 export const PRODUCTS = {
+  matcha: { name: "Rosehip & Matcha Latte", size: "250g", servings: "10 servings", price: "€65.50" },
   latte: { name: "Rtanj Boba Tea", size: "250g", servings: "10 servings", price: "€54.50" },
   boba: { name: "Rtanj Boba Tea", size: "250g", servings: "10 servings", price: "€54.50" },
   protein: { name: "Bio-Active Protein Shake", size: "250g", servings: "10 servings", price: "€45.50" },

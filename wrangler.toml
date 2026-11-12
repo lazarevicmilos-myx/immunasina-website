@@ -12,3 +12,10 @@ binding = "ASSETS"
 html_handling = "none"
 # Localize HTML before serving it, including direct links and crawler requests.
 run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "immunasina-interest"
+# Replace with the database ID from Cloudflare before remote migrations/deployment.
+database_id = "6f0aab8a-dc82-499c-bbb1-a07d41c61d0a"
+migrations_dir = "d1/migrations"
