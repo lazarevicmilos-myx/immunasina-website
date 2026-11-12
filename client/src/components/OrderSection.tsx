@@ -14,10 +14,8 @@ import { toast } from "sonner";
 const PACKAGE_IMAGES: Record<string, string> = {
   matcha: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Rosehip%20%26%20Matcha%20Latte%20package%20image.webp",
   latte: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Wild%20Latte%20small%20pack%20%2B%20box.webp",
-  boba: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Rtanj%20Boba%20Tea%20small%20pack%20%2B%20box.webp",
   protein: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Bio_active%20Protein%20Shake%20small%20pack%20%2B%20box.webp",
   shake: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Gentle%20Vitality%20Blend%20small%20pack%20%2B%20box.webp",
-  coffee: "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20Immuno-Brew%203in1%20small%20pack%20%2B%20box.webp",
 };
 
 export default function OrderSection() {
@@ -61,14 +59,6 @@ export default function OrderSection() {
       price: t("ORDER.PRODUCT_4_PRICE"),
       priceNote: t("ORDER.PRODUCT_4_PRICE_NOTE"),
     },
-    // {
-    //   id: "coffee",
-    //   name: t("ORDER.PRODUCT_5_NAME"),
-    //   size: t("ORDER.PRODUCT_5_SIZE"),
-    //   servings: t("ORDER.PRODUCT_5_SERVINGS"),
-    //   price: t("ORDER.PRODUCT_5_PRICE"),
-    //   priceNote: t("ORDER.PRODUCT_5_PRICE_NOTE"),
-    // },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
