@@ -16,7 +16,9 @@ export default {
     const redirect = pageRedirect(url);
     if (redirect) return Response.redirect(new URL(redirect, url.origin).href, 308);
 
-    const asset = await env.ASSETS.fetch(new URL('/index.html', url.origin));
+    const page = pageInfo(url.pathname);
+    const assetPath = page.isKnown ? `/prerender${page.path}/index.html` : '/index.html';
+    const asset = await env.ASSETS.fetch(new URL(assetPath, url.origin));
     if (!asset.ok) return asset;
     const html = localizeHtml(await asset.text(), url.pathname);
     return new Response(request.method === 'HEAD' ? null : html, {

@@ -6,8 +6,14 @@ import { applyConsent, consentKey, readConsent, saveConsent, settingsEvent, trac
 export default function AnalyticsConsent() {
   const { t } = useTranslation();
   const [path] = useLocation();
-  const [choice, setChoice] = useState(readConsent);
-  const [open, setOpen] = useState(() => readConsent() === null);
+  const [choice, setChoice] = useState<Consent | null>(null);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const saved = readConsent();
+    setChoice(saved);
+    setOpen(saved === null);
+  }, []);
 
   useEffect(() => {
     applyConsent(choice);

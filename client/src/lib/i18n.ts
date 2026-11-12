@@ -17,7 +17,8 @@ i18n
       sr: { translation: srTranslations },
     },
     supportedLngs: ["en", "sr"],
-    lng: languageFromPath(window.location.pathname) ?? defaultLanguage,
+    lng: typeof window === "undefined" ? defaultLanguage : languageFromPath(window.location.pathname) ?? defaultLanguage,
+    initAsync: false,
   });
 
 export default i18n;

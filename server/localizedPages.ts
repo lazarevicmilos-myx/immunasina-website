@@ -1,5 +1,6 @@
 import type { RequestHandler } from "express";
 import { readFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
 import { pageInfo, pageRedirect } from "../shared/localization";
 import { localizeHtml } from "../shared/seo";
 
@@ -12,11 +13,15 @@ export const redirectLocalizedPage: RequestHandler = (req, res, next) => {
   next();
 };
 
-export function localizedPage(templatePath: string): RequestHandler {
+export function localizedPage(templatePath: string, prerendered = false): RequestHandler {
   return async (req, res, next) => {
     if (req.path.includes('.') || req.path.startsWith('/api/')) { res.sendStatus(404); return; }
     try {
-      const html = await readFile(templatePath, "utf8");
+      const page = pageInfo(req.path);
+      const file = prerendered && page.isKnown
+        ? join(dirname(templatePath), "prerender", page.path, "index.html")
+        : templatePath;
+      const html = await readFile(file, "utf8");
       res.status(pageInfo(req.path).isKnown ? 200 : 404).type("html").send(localizeHtml(html, req.path));
     } catch (error) { next(error); }
   };

@@ -4,7 +4,7 @@
  * Text: White on dark gradient overlay
  */
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 const HERO_IMG = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/hero_bck.webp";
@@ -17,18 +17,6 @@ export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    setTimeout(() => {
-      el.querySelectorAll(".hero-reveal").forEach((item, i) => {
-        setTimeout(() => {
-          (item as HTMLElement).style.opacity = "1";
-          (item as HTMLElement).style.transform = "translateY(0)";
-        }, i * 120);
-      });
-    }, 200);
-  }, []);
 
   const benefits = [
     t("HERO.BENEFIT_1"),
@@ -73,8 +61,8 @@ export default function HeroSection() {
           <div
             className="hero-reveal flex items-center gap-6"
             style={{
-              opacity: 0,
-              transform: "translateY(24px)",
+              opacity: 1,
+              transform: "translateY(0)",
               transition: "opacity 0.6s cubic-bezier(0.23,1,0.32,1), transform 0.6s cubic-bezier(0.23,1,0.32,1)",
             }}
           >
@@ -94,8 +82,8 @@ export default function HeroSection() {
           <p
             className="hero-reveal mb-6 px-5 py-2 border btn-gold"
             style={{
-              opacity: 0,
-              transform: "translateY(24px)",
+              opacity: 1,
+              transform: "translateY(0)",
               transition: "opacity 0.6s cubic-bezier(0.23,1,0.32,1), transform 0.6s cubic-bezier(0.23,1,0.32,1)",
               borderColor: "oklch(0.72 0.12 80 / 0.6)",
               fontFamily: "'Lato', sans-serif",
@@ -186,8 +174,8 @@ export default function HeroSection() {
           <div
             className="hero-reveal flex flex-col sm:flex-row gap-4 justify-center items-center"
             style={{
-              opacity: 0,
-              transform: "translateY(24px)",
+              opacity: 1,
+              transform: "translateY(0)",
               transition: "opacity 0.6s cubic-bezier(0.23,1,0.32,1), transform 0.6s cubic-bezier(0.23,1,0.32,1)",
             }}
           >

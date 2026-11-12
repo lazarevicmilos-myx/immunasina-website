@@ -148,7 +148,7 @@ export default function ProductCarousel() {
             {products.map((product, index) => (
               <motion.div
                 key={product.id}
-                initial={{ opacity: 0 }}
+                initial={false}
                 animate={{ opacity: index === currentIndex ? 1 : 0 }}
                 transition={{ duration: 0.6 }}
                 className="absolute inset-0 flex flex-col md:flex-row items-center justify-center p-2 md:p-4"

@@ -2,7 +2,8 @@ import { trpc } from "@/lib/trpc";
 import { UNAUTHED_ERR_MSG } from '@shared/const';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink, TRPCClientError } from "@trpc/client";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { Router } from "wouter";
 import { Suspense } from "react";
 import superjson from "superjson";
 import App from "./App";
@@ -54,15 +55,22 @@ const trpcClient = trpc.createClient({
   ],
 });
 
-createRoot(document.getElementById("root")!).render(
+const application = (
   <Suspense fallback={<div>Loading...</div>}>
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <Router><App /></Router>
       </QueryClientProvider>
     </trpc.Provider>
   </Suspense>
 );
+
+const root = document.getElementById("root")!;
+if (root.dataset.prerendered === "true") {
+  hydrateRoot(root, application);
+} else {
+  createRoot(root).render(application);
+}
 
 // Suppress i18next warning about missing backend
 if (typeof window !== 'undefined') {
