@@ -497,5 +497,77 @@
     "SHIPPING": "Isporuka širom Srbije.",
     "COPYRIGHT": "© 2026 Immunasina · Sva prava zadržana · Napravljeno od liofilizovanog magarećeg mleka.",
     "LOCATION": "Evropa · Srbija · Čista funkcionalna ishrana"
+  },
+  "SCIENCE": {
+    "TITLE": "Naučna osnova",
+    "SEO_DESCRIPTION": "Upoznajte sastojke, biljne komponente, procese i formulacije brenda Immunasina i saznajte zašto koristimo liofilizaciju.",
+    "HEADING": "Zasnovano na nauci",
+    "INGREDIENT_TITLE": "Nauka o sastojcima",
+    "INGREDIENT_SUB": "Magareće mleko",
+    "BOTANICAL_TITLE": "Nauka o biljkama",
+    "BOTANICAL_SUB": "Satureja montana",
+    "PROCESS_TITLE": "Nauka o procesu",
+    "PROCESS_SUB": "Liofilizacija",
+    "FORMULATION_TITLE": "Nauka o formulaciji",
+    "FORMULATION_SUB": "Kako sastojci deluju zajedno",
+    "EXPLORE": "Istražite naučnu osnovu",
+    "WHY": "Zašto liofilizacija?",
+    "BENEFIT_1": "Bez hlađenja",
+    "BENEFIT_1_DESC": "Stabilan format u prahu.",
+    "BENEFIT_2": "Jednostavnija logistika",
+    "BENEFIT_2_DESC": "Osmišljeno za lakši transport i distribuciju na sobnoj temperaturi.",
+    "BENEFIT_3": "Duža stabilnost",
+    "BENEFIT_3_DESC": "Osmišljeno za praktično skladištenje i distribuciju, uz manju zavisnost od hladnog lanca.",
+    "NOTE": "Savremen format za efikasniji sistem ishrane.",
+    "RESEARCH_TITLE": "Istražite naučne radove",
+    "RESEARCH_INTRO": "Izabrani radovi o našim sastojcima i pristupu proizvodnji. Ove publikacije ispituju sastojke ili procese, a ne gotove Immunasina proizvode; uz svaki rad navedeni su vrsta dokaza i ograničenja.",
+    "AUTHORS": "Autori",
+    "READ_PAPER": "Pročitajte publikaciju",
+    "NEW_TAB": "otvara se u novoj kartici",
+    "PAPERS": {
+      "DONKEY_MILK": {
+        "TOPIC": "Magareće mleko",
+        "TYPE": "Narativni pregled",
+        "SUMMARY": "Pregled nutritivnog sastava magarećeg mleka i istraživanja antioksidativne, antimikrobne i imunološke aktivnosti. Rad prikazuje potencijalne primene i izazove proizvodnje, ali nije kliničko ispitivanje koje potvrđuje koristi Immunasina napitka."
+      },
+      "SATUREJA": {
+        "TOPIC": "Satureja montana",
+        "TYPE": "Laboratorijska studija · in vitro",
+        "SUMMARY": "Ispituje ekstrakte i etarska ulja čubra hemijskim i enzimskim testovima. Ekstrakti vrste S. montana pokazali su antioksidativnu aktivnost u laboratoriji. Ovi nalazi ne dokazuju prevenciju ili lečenje bolesti kod ljudi, a koncentrovani ekstrakti nisu isto što i pripremljeni napitak."
+      },
+      "FIBER": {
+        "TOPIC": "Dijetetska vlakna",
+        "TYPE": "Sistematski pregledi i meta-analize · dokazi kod ljudi",
+        "SUMMARY": "Objedinjuje prospektivne studije i randomizovana ispitivanja kvaliteta ugljenih hidrata. Veći unos vlakana bio je povezan sa nižom smrtnošću i rizikom od više hroničnih bolesti; ispitivanja su pokazala i poboljšanja pojedinih faktora rizika. Ispitivanja suplemenata vlakana bila su isključena, pa se nalazi ne mogu direktno preneti na pojedinačni obogaćeni napitak."
+      },
+      "FREEZE_DRYING": {
+        "TOPIC": "Tehnologija liofilizacije",
+        "TYPE": "Pregled tehnologije prerade hrane",
+        "SUMMARY": "Objašnjava zamrzavanje, primarno sušenje sublimacijom i sekundarno sušenje, kao i uticaj parametara procesa na strukturu i fizički kvalitet hrane. Pomaže u razumevanju liofilizacije, ali ne utvrđuje rok trajanja ili očuvanost hranljivih materija konkretnog proizvoda."
+      }
+    }
+  },
+  "PARTNERS": {
+    "TITLE": "Za partnere",
+    "SEO_DESCRIPTION": "Istražite mogućnosti saradnje sa brendom Immunasina u razvoju funkcionalne ishrane za apoteke, prodavnice, kafiće i wellness maloprodaju.",
+    "HEADING": "Gradimo novu generaciju funkcionalne ishrane",
+    "INTRO": "Immunasina razvija novu kategoriju premium funkcionalne ishrane za savremene potrošače.",
+    "ADVANTAGES": "Ključne prednosti",
+    "ADVANTAGE_1": "Platforma stabilnih funkcionalnih napitaka",
+    "ADVANTAGE_2": "Distribucija na sobnoj temperaturi",
+    "ADVANTAGE_3": "Jednostavna priprema",
+    "ADVANTAGE_4": "Više prilika za konzumaciju",
+    "ADVANTAGE_5": "Raznovrsne formulacije",
+    "ADVANTAGE_6": "Model ugovorne proizvodnje",
+    "ADVANTAGE_7": "Globalno širenje",
+    "ADVANTAGE_8": "Spremno za pilot-projekte",
+    "CHANNELS": "Naši proizvodi su namenjeni za:",
+    "PHARMACIES": "Apoteke",
+    "GROCERY": "Prodavnice",
+    "COFFEE": "Kafiće",
+    "WELLNESS": "Wellness maloprodaju",
+    "DTC": "Direktnu prodaju",
+    "CTA": "Postanite Immunasina partner",
+    "EMAIL_SUBJECT": "Upit za saradnju — Immunasina"
   }
 }

@@ -17,7 +17,7 @@ export function localizedPage(templatePath: string): RequestHandler {
     if (req.path.includes('.') || req.path.startsWith('/api/')) { res.sendStatus(404); return; }
     try {
       const html = await readFile(templatePath, "utf8");
-      res.status(pageInfo(req.path).isHome ? 200 : 404).type("html").send(localizeHtml(html, req.path));
+      res.status(pageInfo(req.path).isKnown ? 200 : 404).type("html").send(localizeHtml(html, req.path));
     } catch (error) { next(error); }
   };
 }

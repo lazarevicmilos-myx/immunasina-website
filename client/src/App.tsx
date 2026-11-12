@@ -7,11 +7,16 @@ import AnalyticsConsent from "./components/AnalyticsConsent";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import { SciencePage, PartnersPage } from "./pages/InformationPages";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
+      <Route path="/en/science" component={SciencePage} />
+      <Route path="/sr/science" component={SciencePage} />
+      <Route path="/en/partners" component={PartnersPage} />
+      <Route path="/sr/partners" component={PartnersPage} />
       <Route path={"/en"} component={Home} />
       <Route path={"/sr"} component={Home} />
       <Route path={"/404"} component={NotFound} />

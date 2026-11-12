@@ -15,7 +15,8 @@ export function localizedPath(path: string, language: Language): string {
 export function pageInfo(pathname: string) {
   const language = languageFromPath(pathname) ?? defaultLanguage;
   const path = localizedPath(pathname, language).replace(/\/+$/, "");
-  return { language, path, isHome: path === `/${language}` };
+  const page = path === `/${language}` ? "home" : path === `/${language}/science` ? "science" : path === `/${language}/partners` ? "partners" : "notFound";
+  return { language, path, page, isHome: page === "home", isKnown: page !== "notFound" };
 }
 
 export function pageRedirect(url: URL): string | undefined {

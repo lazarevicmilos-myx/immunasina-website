@@ -20,7 +20,7 @@ export default {
     if (!asset.ok) return asset;
     const html = localizeHtml(await asset.text(), url.pathname);
     return new Response(request.method === 'HEAD' ? null : html, {
-      status: pageInfo(url.pathname).isHome ? 200 : 404,
+      status: pageInfo(url.pathname).isKnown ? 200 : 404,
       headers: { 'Content-Type': 'text/html; charset=utf-8', 'Content-Language': pageInfo(url.pathname).language },
     });
   },

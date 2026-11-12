@@ -1,0 +1,81 @@
+.information-page { background: #f5f1eb; color: #252820; font-family: 'Lato', sans-serif; }
+.information-page main { padding-top: 100px; }
+.info-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 3.6vw, 3.4rem); font-weight: 500; line-height: 1.07; text-transform: uppercase; color: #303b25; text-wrap: balance; }
+.info-rule { width: 230px; max-width: 75%; height: 1px; margin: 18px 0 30px; background: linear-gradient(90deg, #b48b4b, #b48b4b18); position: relative; }
+.info-rule::after { content: ''; position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #a47d3c; top: -2px; left: 52%; }
+.info-icon { display: inline-flex; align-items: center; justify-content: center; border: 1px solid #aa813d; border-radius: 50%; color: #aa813d; width: 78px; height: 78px; margin-bottom: 18px; }
+.info-icon svg { width: 45px; height: 45px; }
+.science-intro { padding: 54px 0 32px; background: radial-gradient(ellipse at top right, #e4e3d6 0, transparent 40%), #f5f1ec; }
+.science-topics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 25px; }
+.science-topic { text-align: center; min-width: 0; }
+.science-topic h2, .lyophilization-benefits h3, .partners-copy h2 { color: #9a6e29; font-size: .95rem; line-height: 1.4; font-weight: 700; text-transform: uppercase; letter-spacing: .045em; }
+.science-topic p { margin: 9px 0 22px; min-height: 44px; font-size: 1rem; line-height: 1.5; }
+.science-photo { height: clamp(220px, 24vw, 340px); border-radius: 7px; overflow: hidden; background: #e3ded3; }
+.science-photo img { width: 100%; height: 100%; object-fit: cover; }
+.science-photo-process img { transform: scale(1.5); transform-origin: right center; }
+.science-action { display: flex; justify-content: center; margin-top: 28px; }
+.research-toggle { cursor: pointer; border: 0; }
+.research-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.science-research { padding-top: 45px; margin-top: 32px; border-top: 1px solid #b48b4b55; }
+.science-research[hidden] { display: none; }
+.science-research .info-heading { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.research-intro { max-width: 780px; line-height: 1.8; margin: 18px 0 28px; color: #555548; }
+.research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.research-paper { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(20px, 3vw, 32px); border: 1px solid #b48b4b40; background: #fffcf6; border-radius: 7px; min-width: 0; }
+.research-topic { color: #966923; font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; margin-bottom: 12px; }
+.research-evidence { background: #e9eddf; color: #3c482b; border-radius: 4px; padding: 5px 9px; font-size: .72rem; line-height: 1.5; }
+.research-paper h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.65rem; font-weight: 600; line-height: 1.2; margin: 18px 0 12px; overflow-wrap: anywhere; }
+.research-publication { font-size: .8rem; color: #79643e; }
+.research-authors { font-size: .8rem; line-height: 1.7; color: #5b5b50; margin: 12px 0; }
+.research-summary { font-size: .9rem; line-height: 1.8; margin-bottom: 22px; }
+.research-paper > a { display: inline-flex; align-items: center; gap: 8px; color: #354021; text-decoration: underline; text-underline-offset: 4px; font-size: .85rem; margin-top: auto; }
+.research-paper > a:focus-visible { outline: 2px solid #a47d3c; outline-offset: 5px; }
+@media (max-width: 700px) { .research-grid { grid-template-columns: 1fr; } }
+.info-button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 18px 30px; border-radius: 5px; background: #354021; color: #fffdf6; font-size: .9rem; letter-spacing: .065em; text-transform: uppercase; text-align: center; transition: background .2s; }
+.info-button:hover { background: #4c5935; }
+.info-button:focus-visible { outline: 3px solid #b48b4b; outline-offset: 4px; }
+.lyophilization-section { scroll-margin-top: 110px; border-top: 10px solid #fffaf5; padding: 50px 0 30px; background-size: cover; background-position: center; }
+.lyophilization-content { width: 57%; }
+.lyophilization-benefits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; text-align: center; }
+.lyophilization-benefits p { font-size: .9rem; line-height: 1.6; margin-top: 16px; }
+.science-note { display: flex; align-items: center; gap: 20px; border-top: 1px solid #b48b4b55; margin-top: 26px; padding-top: 22px; font-size: 1rem; line-height: 1.6; }
+.science-note svg { flex: 0 0 32px; color: #aa813d; }
+.partners-section { background-size: cover; background-position: center; min-height: 710px; padding: 65px 0 90px; }
+.partners-layout { display: grid; grid-template-columns: 30% 40%; gap: 1%; align-items: end; }
+.partners-copy .info-heading { font-size: clamp(2.2rem, 3.2vw, 3rem); }
+.partners-intro { font-size: .95rem; line-height: 1.8; margin-bottom: 22px; }
+.partner-advantages { margin-top: 14px; display: grid; gap: 10px; }
+.partner-advantages li { display: flex; align-items: center; gap: 10px; font-size: .85rem; line-height: 1.45; }
+.partner-advantages svg { color: #a47d3c; border: 1px solid #a47d3c; border-radius: 50%; flex-shrink: 0; }
+.partner-channels { text-align: center; padding-bottom: 16px; }
+.partner-channels > p { margin-bottom: 24px; }
+.partner-channels ul { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-bottom: 36px; }
+.partner-channels li { display: flex; flex-direction: column; align-items: center; gap: 15px; font-size: .66rem; text-transform: uppercase; line-height: 1.5; }
+.partner-channels li svg { width: 44px; height: 44px; color: #a47d3c; }
+@media (max-width: 900px) {
+  .science-topics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; }
+  .science-photo { height: 300px; }
+  .lyophilization-content { width: 70%; }
+  .lyophilization-section { position: relative; isolation: isolate; }
+  .lyophilization-section::before { content: ''; position: absolute; inset: 0; background: #f5eee3df; z-index: -1; }
+  .partners-section { position: relative; isolation: isolate; background-position: 65% center; }
+  .partners-section::before { content: ''; position: absolute; inset: 0; background: #f5eee3cc; z-index: -1; }
+  .partners-layout { grid-template-columns: 1fr; gap: 48px; }
+  .partners-copy { max-width: 550px; }
+  .partner-channels { max-width: 650px; }
+}
+@media (max-width: 600px) {
+  .information-page main { padding-top: 85px; }
+  .science-intro, .partners-section { padding-top: 36px; }
+  .science-topics { gap: 25px 16px; }
+  .science-topic h2 { font-size: .75rem; min-height: 34px; }
+  .science-topic p { font-size: .85rem; min-height: 42px; }
+  .science-photo { height: 210px; }
+  .info-icon { width: 62px; height: 62px; }
+  .info-icon svg { width: 36px; height: 36px; }
+  .lyophilization-content { width: 100%; }
+  .lyophilization-benefits { grid-template-columns: 1fr; gap: 28px; }
+  .lyophilization-benefits p { max-width: 290px; margin: 10px auto 0; }
+  .partner-channels ul { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 12px; }
+  .info-button { padding: 16px 20px; font-size: .78rem; }
+}

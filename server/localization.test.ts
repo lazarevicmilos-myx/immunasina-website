@@ -30,6 +30,24 @@ describe("localized routing", () => {
 
 describe("localized HTML", () => {
   const template = readFileSync('client/index.html', 'utf8');
+  it("serves science and partner pages with localized indexable metadata", async () => {
+    for (const language of ['en', 'sr']) {
+      for (const page of ['science', 'partners']) {
+        const path = `/${language}/${page}`;
+        expect(pageInfo(path).isKnown).toBe(true);
+        const response = await worker.fetch(new Request(`https://immunasina.com${path}`), {
+          ASSETS: { fetch: async () => new Response(template) },
+        });
+        expect(response.status).toBe(200);
+        const html = await response.text();
+        expect(html).toContain('content="index, follow"');
+        expect(html).toContain(`href="https://immunasina.com${path}"`);
+        expect(html).toContain(`hreflang="en" href="https://immunasina.com/en/${page}"`);
+        expect(html).not.toContain('noindex');
+      }
+    }
+    expect(pageRedirect(new URL('https://immunasina.com/science'))).toBe('/sr/science');
+  });
   for (const [language, translations] of [['en', en], ['sr', sr]] as const) {
     it(`renders ${language} metadata before JavaScript executes`, () => {
       const html = localizeHtml(template, `/${language}`);

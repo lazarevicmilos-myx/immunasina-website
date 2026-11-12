@@ -12,10 +12,12 @@ import { useTranslation } from "react-i18next";
 
 const LOGO_URL = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20logo%20short.webp";
 
-export default function Navbar() {
+export default function Navbar({ solid = false }: { solid?: boolean }) {
   const { i18n, t } = useTranslation();
   const [, navigate] = useLocation();
-  const [scrolled, setScrolled] = useState(false);
+  const [hasScrolled, setScrolled] = useState(false);
+  const scrolled = solid || hasScrolled;
+  const home = `/${i18n.resolvedLanguage?.startsWith("sr") ? "sr" : "en"}`;
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -34,10 +36,10 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: t("NAV.RITUALS"), href: "#rituals" },
-    { label: t("NAV.WHY_IT_WORKS"), href: "#why-it-works" },
-    { label: t("NAV.BLEND"), href: "#formulation" },
-    { label: t("NAV.COLLECTION"), href: "#products" },
+    { label: t("NAV.RITUALS"), href: home + "#rituals" },
+    { label: t("NAV.WHY_IT_WORKS"), href: home + "#why-it-works" },
+    { label: t("NAV.BLEND"), href: home + "#formulation" },
+    { label: t("NAV.COLLECTION"), href: home + "#products" },
   ];
 
   return (
@@ -52,7 +54,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between py-3 md:py-4">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-0 no-underline w-24 md:w-[140px]">
+        <a href={home} className="flex items-center gap-0 no-underline w-24 md:w-[140px]">
           <img
             src={LOGO_URL}
             alt="Immunasina — Pure Functional Nutrition"
@@ -143,7 +145,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="#order"
+            href={`${home}#order`}
             className="btn-gold"
             style={{ padding: "0.6rem 1.5rem", fontSize: "0.7rem", textDecoration: "none" }}
           >
@@ -234,7 +236,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="#order"
+            href={`${home}#order`}
             className="btn-gold text-center"
             style={{ textDecoration: "none" }}
             onClick={() => setMenuOpen(false)}

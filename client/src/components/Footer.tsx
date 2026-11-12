@@ -4,7 +4,8 @@ import { settingsEvent } from "@/lib/analytics";
 const LOGO_URL = "https://pub-6206b6e3cb7a4d918837c1fff3ffc368.r2.dev/Immunasina%20logo%20short.webp";
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const home = `/${i18n.resolvedLanguage?.startsWith("sr") ? "sr" : "en"}`;
 
   return (
     <footer
@@ -54,12 +55,12 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               {[
-                { label: t("FOOTER.NAVIGATE_1"), href: "#rituals" },
-                { label: t("FOOTER.NAVIGATE_2"), href: "#why-it-works" },
-                { label: t("FOOTER.NAVIGATE_3"), href: "#formulation" },
-                { label: t("FOOTER.NAVIGATE_4"), href: "#products" },
-                { label: t("FOOTER.NAVIGATE_5"), href: "#" },
-                { label: t("FOOTER.NAVIGATE_6"), href: "#" },
+                { label: t("FOOTER.NAVIGATE_1"), href: home + "#rituals" },
+                { label: t("FOOTER.NAVIGATE_2"), href: home + "#why-it-works" },
+                { label: t("FOOTER.NAVIGATE_3"), href: home + "#formulation" },
+                { label: t("FOOTER.NAVIGATE_4"), href: home + "#products" },
+                { label: t("FOOTER.NAVIGATE_5"), href: `${home}/science` },
+                { label: t("FOOTER.NAVIGATE_6"), href: `${home}/partners` },
               ].map((link) => (
                 <a
                   key={link.href}

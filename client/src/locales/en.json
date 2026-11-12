@@ -497,5 +497,77 @@
     "SHIPPING": "Shipping accross Serbia.",
     "COPYRIGHT": "© 2026 Immunasina · All rights reserved · Crafted from Lyophilized Donkey Milk.",
     "LOCATION": "Europe · Serbia · Pure Functional Nutrition"
+  },
+  "SCIENCE": {
+    "TITLE": "The Science Proof",
+    "SEO_DESCRIPTION": "Explore Immunasina’s ingredient, botanical, process and formulation approach, and discover why we use lyophilization.",
+    "HEADING": "Backed by science",
+    "INGREDIENT_TITLE": "Ingredient science",
+    "INGREDIENT_SUB": "Donkey milk",
+    "BOTANICAL_TITLE": "Botanical science",
+    "BOTANICAL_SUB": "Satureja montana",
+    "PROCESS_TITLE": "Process science",
+    "PROCESS_SUB": "Lyophilization",
+    "FORMULATION_TITLE": "Formulation science",
+    "FORMULATION_SUB": "How ingredients work together",
+    "EXPLORE": "Explore the science",
+    "WHY": "Why lyophilization?",
+    "BENEFIT_1": "No refrigeration",
+    "BENEFIT_1_DESC": "Shelf-stable powder format.",
+    "BENEFIT_2": "Simplified logistics",
+    "BENEFIT_2_DESC": "Designed for easier transportation and ambient distribution.",
+    "BENEFIT_3": "Longer stability",
+    "BENEFIT_3_DESC": "Designed for convenient storage and distribution, with reduced dependence on cold-chain infrastructure.",
+    "NOTE": "A modern format for a more efficient food system.",
+    "RESEARCH_TITLE": "Explore the research",
+    "RESEARCH_INTRO": "Selected research on our ingredients and production approach. These publications study ingredients or processes, not finished Immunasina products; the type of evidence and its limits are noted for each paper.",
+    "AUTHORS": "Authors",
+    "READ_PAPER": "Read publication",
+    "NEW_TAB": "opens in a new tab",
+    "PAPERS": {
+      "DONKEY_MILK": {
+        "TOPIC": "Donkey milk",
+        "TYPE": "Narrative review",
+        "SUMMARY": "Reviews donkey milk’s nutrients and research into antioxidant, antimicrobial and immune-related activity. It provides an overview of potential applications and production challenges, rather than a clinical trial demonstrating benefits of an Immunasina drink."
+      },
+      "SATUREJA": {
+        "TOPIC": "Satureja montana",
+        "TYPE": "Laboratory study · in vitro",
+        "SUMMARY": "Examines savory extracts and essential oils using chemical and enzyme assays. S. montana extracts showed antioxidant activity in laboratory tests. These findings do not demonstrate disease prevention or treatment in people, and concentrated extracts are not equivalent to a prepared beverage."
+      },
+      "FIBER": {
+        "TOPIC": "Dietary fiber",
+        "TYPE": "Systematic reviews & meta-analyses · human evidence",
+        "SUMMARY": "Combines prospective studies and randomized trials on carbohydrate quality. Higher dietary fiber intake was associated with lower mortality and several chronic disease risks; trials also found improvements in selected risk factors. The review excluded fiber-supplement trials, so its results should not be applied directly to an individual fortified drink."
+      },
+      "FREEZE_DRYING": {
+        "TOPIC": "Lyophilization technology",
+        "TYPE": "Food-processing review",
+        "SUMMARY": "Explains freezing, primary drying by sublimation and secondary drying, and how process settings influence food structure and physical quality. It supports understanding of freeze-drying technology, but does not establish the shelf life or nutrient retention of a specific product."
+      }
+    }
+  },
+  "PARTNERS": {
+    "TITLE": "For Partners",
+    "SEO_DESCRIPTION": "Explore partnership opportunities with Immunasina, a developing functional nutrition brand for pharmacies, grocery, coffee shops and wellness retail.",
+    "HEADING": "Build the next generation of functional nutrition",
+    "INTRO": "Immunasina is developing a new premium functional nutrition category for modern consumers.",
+    "ADVANTAGES": "Key advantages",
+    "ADVANTAGE_1": "Shelf-stable functional beverage platform",
+    "ADVANTAGE_2": "Ambient distribution",
+    "ADVANTAGE_3": "Ready to mix",
+    "ADVANTAGE_4": "Multiple consumption occasions",
+    "ADVANTAGE_5": "Differentiated formulations",
+    "ADVANTAGE_6": "Contract manufacturing model",
+    "ADVANTAGE_7": "Global expansion",
+    "ADVANTAGE_8": "Pilot-ready",
+    "CHANNELS": "Our products are designed for:",
+    "PHARMACIES": "Pharmacies",
+    "GROCERY": "Grocery",
+    "COFFEE": "Coffee shops",
+    "WELLNESS": "Wellness retail",
+    "DTC": "DTC",
+    "CTA": "Partner with Immunasina",
+    "EMAIL_SUBJECT": "Partnership inquiry — Immunasina"
   }
 }

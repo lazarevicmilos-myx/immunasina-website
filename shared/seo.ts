@@ -8,20 +8,21 @@ const escape = (value: string) => value.replace(/&/g, "&amp;").replace(/</g, "&l
 const json = (value: unknown) => JSON.stringify(value).replace(/</g, "\\u003c");
 
 export function seoMarkup(pathname: string): string {
-  const { language, path, isHome } = pageInfo(pathname);
+  const { language, path, isHome, isKnown, page } = pageInfo(pathname);
   const translations = language === "en" ? en : sr;
   const seo = translations.SEO;
-  const title = isHome ? seo.TITLE : translations.NOT_FOUND.SEO_TITLE;
-  const description = isHome ? seo.DESCRIPTION : translations.NOT_FOUND.DESCRIPTION;
+  const content = page === "science" ? translations.SCIENCE : page === "partners" ? translations.PARTNERS : undefined;
+  const title = isHome ? seo.TITLE : content ? `${content.TITLE} | Immunasina` : translations.NOT_FOUND.SEO_TITLE;
+  const description = isHome ? seo.DESCRIPTION : content?.SEO_DESCRIPTION ?? translations.NOT_FOUND.DESCRIPTION;
   const url = siteUrl + path;
   const meta = (key: string, value: string, property = false) => `<meta data-seo ${property ? "property" : "name"}="${key}" content="${escape(value)}" />`;
   return [
     `<title data-seo>${escape(title)}</title>`,
     meta("description", description),
     meta("keywords", isHome ? Object.entries(seo).filter(([key]) => key.startsWith("KEYWORDS_")).map(([, value]) => value).join(", ") : ""),
-    meta("robots", isHome ? "index, follow" : "noindex, follow"),
+    meta("robots", isKnown ? "index, follow" : "noindex, follow"),
     `<link data-seo rel="canonical" href="${escape(url)}" />`,
-    ...(isHome ? [...languages.map(lang => `<link data-seo rel="alternate" hreflang="${lang}" href="${siteUrl}${localizedPath(path, lang)}" />`), `<link data-seo rel="alternate" hreflang="x-default" href="${siteUrl}/sr" />`] : []),
+    ...(isKnown ? [...languages.map(lang => `<link data-seo rel="alternate" hreflang="${lang}" href="${siteUrl}${localizedPath(path, lang)}" />`), `<link data-seo rel="alternate" hreflang="x-default" href="${siteUrl}${localizedPath(path, "sr")}" />`] : []),
     meta("og:type", "website", true), meta("og:url", url, true),
     meta("og:title", title, true), meta("og:description", description, true),
     meta("og:image", image, true), meta("og:locale", language === "en" ? "en_US" : "sr_RS", true),
