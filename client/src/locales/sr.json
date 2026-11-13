@@ -425,7 +425,9 @@
     "PREVIOUS_PRODUCT": "Prethodni proizvod",
     "NEXT_PRODUCT": "Sledeći proizvod",
     "GO_TO_PRODUCT": "Idi na proizvod {{index}}",
-    "PLAY": "POKRENI"
+    "PLAY": "POKRENI",
+    "PROTEIN_LABEL": "Proteini",
+    "PER_SERVING": "po porciji"
   },
   "ORDER": {
     "SECTION_LABEL": "Uskoro u ponudi",

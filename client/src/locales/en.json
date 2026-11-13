@@ -425,7 +425,9 @@
     "PREVIOUS_PRODUCT": "Previous product",
     "NEXT_PRODUCT": "Next product",
     "GO_TO_PRODUCT": "Go to product {{index}}",
-    "PLAY": "Play"
+    "PLAY": "Play",
+    "PROTEIN_LABEL": "Protein",
+    "PER_SERVING": "per serving"
   },
   "ORDER": {
     "SECTION_LABEL": "Coming Soon",

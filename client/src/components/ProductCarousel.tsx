@@ -12,13 +12,15 @@ interface Product {
   texture: string;
   bestFor: string;
   weight: string;
+  protein: number;
   servings: string;
   price: string;
   isHero?: boolean;
 }
 
 export default function ProductCarousel() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const proteinFormat = new Intl.NumberFormat(i18n.resolvedLanguage === "sr" ? "sr-Latn" : "en", { maximumFractionDigits: 1 });
 
   const products: Product[] = [
     {
@@ -30,6 +32,7 @@ export default function ProductCarousel() {
       texture: t("PRODUCTS.PRODUCT_1_TEXTURE"),
       bestFor: t("PRODUCTS.PRODUCT_1_BEST"),
       weight: t("PRODUCTS.PRODUCT_1_SIZE"),
+      protein: 4,
       servings: t("PRODUCTS.PRODUCT_1_SERVINGS"),
       price: t("PRODUCTS.PRODUCT_1_PRICE"),
       isHero: true,
@@ -43,6 +46,7 @@ export default function ProductCarousel() {
       texture: t("PRODUCTS.PRODUCT_2_TEXTURE"),
       bestFor: t("PRODUCTS.PRODUCT_2_BEST"),
       weight: t("PRODUCTS.PRODUCT_2_SIZE"),
+      protein: 4,
       servings: t("PRODUCTS.PRODUCT_2_SERVINGS"),
       price: t("PRODUCTS.PRODUCT_2_PRICE"),
     },
@@ -55,6 +59,7 @@ export default function ProductCarousel() {
       texture: t("PRODUCTS.PRODUCT_3_TEXTURE"),
       bestFor: t("PRODUCTS.PRODUCT_3_BEST"),
       weight: t("PRODUCTS.PRODUCT_3_SIZE"),
+      protein: 13.8,
       servings: t("PRODUCTS.PRODUCT_3_SERVINGS"),
       price: t("PRODUCTS.PRODUCT_3_PRICE"),
     },
@@ -67,6 +72,7 @@ export default function ProductCarousel() {
       texture: t("PRODUCTS.PRODUCT_4_TEXTURE"),
       bestFor: t("PRODUCTS.PRODUCT_4_BEST"),
       weight: t("PRODUCTS.PRODUCT_4_SIZE"),
+      protein: 10.5,
       servings: t("PRODUCTS.PRODUCT_4_SERVINGS"),
       price: t("PRODUCTS.PRODUCT_4_PRICE"),
     },
@@ -191,7 +197,7 @@ export default function ProductCarousel() {
                     </div>
 
                     {/* Product Specs */}
-                    <div className="flex justify-center md:justify-start gap-6 text-xs md:text-sm">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-3 text-xs md:text-sm">
                       <div>
                         <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
                         product.id === 'matcha' ? "oklch(0.40 0.03 60)" :
@@ -201,6 +207,19 @@ export default function ProductCarousel() {
                         </p>
                         <p className="font-semibold" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" : "oklch(0.22 0.04 55)" }}>
                           {product.weight}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] md:text-xs tracking-widest uppercase opacity-75 mb-0.5" style={{ color: product.id === 'latte' ? "oklch(0.25 0.04 55)" :
+                        product.id === 'matcha' ? "oklch(0.40 0.03 60)" :
+                        product.id === 'shake' ? "oklch(0.95 0.01 80)" : "oklch(0.65 0.08 80)" }}>
+                          {t("PRODUCTS.PROTEIN_LABEL")}
+                        </p>
+                        <p className="font-semibold" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" : "oklch(0.22 0.04 55)" }}>
+                          {proteinFormat.format(product.protein)} g
+                        </p>
+                        <p className="text-[10px] opacity-75" style={{ color: product.id === 'latte' ? "oklch(0.95 0.01 80)" : "oklch(0.22 0.04 55)" }}>
+                          {t("PRODUCTS.PER_SERVING")}
                         </p>
                       </div>
                       <div>
