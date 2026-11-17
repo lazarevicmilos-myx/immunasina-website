@@ -55,6 +55,9 @@ export default function HeroSection() {
             <p className="text-1xl md:text-2xl lg:text-2xl tracking-widest uppercase text-[oklch(0.72_0.12_80)] mb-2 letter-spacing">
               {t("HERO.H1_TAGLINE")}
             </p>
+            <p className="text-sm xl:text-base md:whitespace-nowrap leading-relaxed text-[oklch(0.95_0.02_80)] mb-4">
+              {t("HERO.H1_DESCRIPTION")}
+            </p>
           </div>
           
           {/* Ornament divider */}
